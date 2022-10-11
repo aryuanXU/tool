@@ -1,0 +1,1386 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_:RSDS_R ICU1_5 RSDS_L AVP IDC_L3 IDC_L2 GW 
+
+BO_ 367 RSDS_FD1: 64 RSDS_R
+ SG_ RSDS_ObjRelAccelY_Le : 15|10@0+ (0.03125,-16.0) [-16.0|15.9688] "m/s2" GW
+ SG_ Checksum_RSDS_R_2 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" GW
+ SG_ RSDS_Brk_ErrSts : 79|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_BrkgReq : 78|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_BrkgReqVal : 77|8@0+ (0.05,-10.0) [-10.0|2.75] "m/s^2" GW
+ SG_ RSDS_LEDLightReqLeft : 85|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ RSDS_LEDLightReqRight : 83|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ RSDS_IPSoundReq : 81|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ RSDS_RCW_Trigger : 105|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ RSDS_ErrSts : 119|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_BrkgTrig : 118|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_BliSts : 117|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_TrailerSts : 116|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_LCAResp : 115|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_CTA_Actv : 126|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_DOWResp : 114|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_RCWResp : 113|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_RCTAResp : 112|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_RCTABrkAResp : 127|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ BSD_LCA_warningReqRight : 95|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ BSD_LCA_warningReqleft : 93|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ DOW_warningReqRight : 91|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ DOW_warningReqleft : 89|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ RCTA_warningReqRight : 125|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RCTA_warningReqLeft : 124|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RollingCounter_RSDS_R_2 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" GW
+ SG_ Checksum_RSDS_R_3 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" GW
+ SG_ LeTarSts : 143|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ ObjIDLe : 141|6@0+ (1.0,0.0) [0.0|63.0] "" GW
+ SG_ ObjLgtPosnCurvLe : 151|10@0+ (0.1,-92.3) [-92.3|10.0] "m" GW
+ SG_ ObjLatPosnCurvLe : 157|8@0+ (0.1,-12.8) [-12.8|12.7] "m" GW
+ SG_ ObjLgtSpdCurvLe : 165|10@0+ (0.1,-10.0) [-10.0|92.3] "m/s" GW
+ SG_ ObjLatSpdCurvLe : 171|7@0+ (0.1,-6.4) [-6.4|6.3] "m/s" GW
+ SG_ ObjTTCLe : 180|7@0+ (0.1,0.0) [0.0|12.7] "s" GW
+ SG_ RollingCounter_RSDS_R_3 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" GW
+ SG_ Checksum_RSDS_R_4 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" GW
+ SG_ ObjLenLe : 207|4@0+ (1.0,0.0) [0.0|15.0] "m" GW
+ SG_ ObjWidthLe : 203|3@0+ (0.5,0.0) [0.0|3.5] "m" GW
+ SG_ ObjStatyLe : 200|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ ZoneIndLe : 215|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ ObjStsLe : 213|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ ObjRinRi : 211|4@0+ (1.0,0.0) [0.0|15.0] "m" GW
+ SG_ ObjWidthRi : 223|3@0+ (0.5,0.0) [0.0|3.5] "m" GW
+ SG_ ObjStatyRi : 220|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ ZoneIndRi : 219|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ ObjStsRi : 217|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ RollingCounter_RSDS_R_4 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" GW
+ SG_ Checksum_RSDS_R_5 : 263|8@0+ (1.0,0.0) [0.0|255.0] "" GW
+ SG_ RiTarSts : 271|2@0+ (1.0,0.0) [0.0|3.0] "" GW
+ SG_ ObjIDRi : 269|6@0+ (1.0,0.0) [0.0|63.0] "" GW
+ SG_ ObjLgtPosnCurvRi : 279|10@0+ (0.1,-92.3) [-92.3|10.0] "m" GW
+ SG_ ObjLatPosnCurvRi : 285|8@0+ (0.1,-12.8) [-12.8|12.7] "m" GW
+ SG_ ObjLgtSpdCurvRi : 293|10@0+ (0.1,-10.0) [-10.0|92.3] "m/s" GW
+ SG_ ObjLatSpdCurvRi : 299|7@0+ (0.1,-6.4) [-6.4|6.3] "m/s" GW
+ SG_ ObjTTCRi : 308|7@0+ (0.1,0.0) [0.0|12.7] "s" GW
+ SG_ RollingCounter_RSDS_R_5 : 315|4@0+ (1.0,0.0) [0.0|15.0] "" GW
+ SG_ RSDS_ObjDistXStd_Le : 335|5@0+ (0.375,0.0) [0.0|11.625] "m" GW
+ SG_ RSDS_ObjDistYStd_Le : 330|5@0+ (0.375,0.0) [0.0|11.625] "m" GW
+ SG_ RSDS_ObjRelVelXStd_Le : 341|5@0+ (0.375,0.0) [0.0|11.625] "mps" GW
+ SG_ RSDS_ObjRelVelYStd_Le : 336|5@0+ (0.375,0.0) [0.0|11.625] "mps" GW
+ SG_ RSDS_ObjRAccelXStd_Le : 347|5@0+ (0.375,0.0) [0.0|11.625] "mps2" GW
+ SG_ RSDS_ObjRAccelYStd_Le : 358|5@0+ (0.375,0.0) [0.0|11.625] "mps2" GW
+ SG_ RSDS_ObjDistXStd_Ri : 353|5@0+ (0.375,0.0) [0.0|11.625] "m" GW
+ SG_ RSDS_ObjDistYStd_Ri : 364|5@0+ (0.375,0.0) [0.0|11.625] "m" GW
+ SG_ RSDS_ObjRelVelXStd_Ri : 375|5@0+ (0.375,0.0) [0.0|11.625] "mps" GW
+ SG_ RSDS_ObjRelVelYStd_Ri : 399|5@0+ (0.375,0.0) [0.0|11.625] "mps" GW
+ SG_ RSDS_ObjRAccelXStd_Ri : 394|5@0+ (0.375,0.0) [0.0|11.625] "mps2" GW
+ SG_ RSDS_ObjRAccelYStd_Ri : 405|5@0+ (0.375,0.0) [0.0|11.625] "mps2" GW
+ SG_ RSDS_ObjRelAccelX_Le : 415|10@0+ (0.03125,-16.0) [-16.0|15.9688] "m/s2" GW
+ SG_ RSDS_ObjRelAccelX_Ri : 421|10@0+ (0.03125,-16.0) [-16.0|15.9688] "m/s2" GW
+ SG_ RSDS_ObjRelAccelY_Ri : 427|10@0+ (0.03125,-16.0) [-16.0|15.9688] "m/s2" GW
+BO_ 778 RSDS_FD2: 64 RSDS_R
+ SG_ RCTA_B_TTC : 15|6@0+ (0.1,0.0) [0.0|6.3] "s" GW
+ SG_ BSD_LCA_Left_TTC : 9|6@0+ (0.1,0.0) [0.0|6.3] "s" GW
+ SG_ BSD_LCA_Right_TTC : 19|6@0+ (0.1,0.0) [0.0|6.3] "s" GW
+ SG_ RCW_TTC : 29|6@0+ (0.1,0.0) [0.0|6.3] "s" GW
+ SG_ RSDS_LeTgt_01 : 79|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_LeTgt_01_dx : 87|10@0+ (0.1,-90.0) [-90.0|5.0] "m" GW
+ SG_ RSDS_LeTgt_01_dy : 78|7@0+ (0.1,0.0) [0.0|8.0] "m" GW
+ SG_ RSDS_LeTgt_02 : 93|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_LeTgt_02_dx : 92|10@0+ (0.1,-90.0) [-90.0|5.0] "m" GW
+ SG_ RSDS_LeTgt_02_dy : 98|7@0+ (0.1,0.0) [0.0|8.0] "m" GW
+ SG_ RSDS_RiTgt_01 : 107|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_RiTgt_01_dx : 106|10@0+ (0.1,-90.0) [-90.0|5.0] "m" GW
+ SG_ RSDS_RiTgt_01_dy : 143|7@0+ (0.1,-8.0) [-8.0|0.0] "m" GW
+ SG_ RSDS_RiTgt_02 : 136|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_RiTgt_02_dx : 151|10@0+ (0.1,-90.0) [-90.0|5.0] "m" GW
+ SG_ RSDS_RiTgt_02_dy : 157|7@0+ (0.1,-8.0) [-8.0|0.0] "m" GW
+ SG_ RSDS_MidTgt_01 : 166|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_MidTgt_01_dx : 165|10@0+ (0.1,-90.0) [-90.0|5.0] "m" GW
+ SG_ RSDS_MidTgt_01_dy : 171|7@0+ (0.1,-4.0) [-4.0|4.0] "m" GW
+ SG_ RSDS_MidTgt_02 : 180|1@0+ (1.0,0.0) [0.0|1.0] "" GW
+ SG_ RSDS_MidTgt_02_dx : 207|10@0+ (0.1,-90.0) [-90.0|5.0] "m" GW
+ SG_ RSDS_MidTgt_02_dy : 213|7@0+ (0.1,-4.0) [-4.0|4.0] "m" GW
+BO_ 1088 RSDS_L_AD1: 64 RSDS_R
+ SG_ RSDS_L_hdr_ErrorStatus : 181|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_hdr_TimeStamp : 207|27@0+ (0.00097,0.0) [0.0|65536.0] "s" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjID_1 : 15|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjExistProb_1 : 23|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjObstacleProb_1 : 18|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistX_1 : 29|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistY_1 : 33|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelX_1 : 79|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelY_1 : 82|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelX_1 : 54|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelY_1 : 143|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistXStd_1 : 101|6@0+ (0.1,0.0) [0.0|3.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistYStd_1 : 111|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelXStd_1 : 105|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelYStd_1 : 115|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelXStd_1 : 149|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelYStd_1 : 159|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjWidth_1 : 153|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjLength_1 : 175|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjID_2 : 335|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjExistProb_2 : 343|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjObstacleProb_2 : 338|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistX_2 : 349|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistY_2 : 353|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelX_2 : 399|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelY_2 : 402|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelX_2 : 374|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelY_2 : 463|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistXStd_2 : 421|6@0+ (0.1,0.0) [0.0|3.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistYStd_2 : 431|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelXStd_2 : 425|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelYStd_2 : 435|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelXStd_2 : 469|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelYStd_2 : 479|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjWidth_2 : 473|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjLength_2 : 495|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum1 : 7|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum2 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum3 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum4 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum5 : 327|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum6 : 391|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum7 : 455|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter1 : 59|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter2 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter3 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter4 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter5 : 379|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter6 : 443|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter7 : 507|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjMeasured_1 : 497|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjMeasured_2 : 499|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_BLIND : 177|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_hdr_TimerStempStatus : 228|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ BlockCounter1 : 236|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_hdr_AutosarTimeStamp : 271|26@0+ (1,0.0) [0.0|67108863] "ms" AVP,ICU1_5,IDC_L2,IDC_L3
+BO_ 1089 RSDS_L_AD2: 64 RSDS_R
+ SG_ RSDS_L_ObjID_3 : 15|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjExistProb_3 : 23|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjObstacleProb_3 : 18|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistX_3 : 29|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistY_3 : 33|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelX_3 : 79|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelY_3 : 82|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelX_3 : 54|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelY_3 : 143|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistXStd_3 : 101|6@0+ (0.1,0.0) [0.0|3.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistYStd_3 : 111|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelXStd_3 : 105|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelYStd_3 : 115|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelXStd_3 : 149|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelYStd_3 : 159|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjWidth_3 : 153|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjLength_3 : 175|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjID_4 : 335|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjExistProb_4 : 343|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjObstacleProb_4 : 338|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistX_4 : 349|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistY_4 : 353|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelX_4 : 399|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelY_4 : 402|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelX_4 : 374|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelY_4 : 463|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistXStd_4 : 421|6@0+ (0.1,0.0) [0.0|3.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistYStd_4 : 431|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelXStd_4 : 425|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelYStd_4 : 435|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelXStd_4 : 469|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelYStd_4 : 479|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjWidth_4 : 473|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjLength_4 : 495|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum8 : 7|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum9 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum10 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum12 : 327|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum13 : 391|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum14 : 455|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter8 : 59|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter9 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter10 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter12 : 379|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter13 : 443|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter14 : 507|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjMeasured_3 : 497|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjMeasured_4 : 499|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum11 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Rollingcounter11 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ BlockCounter2 : 236|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+BO_ 1090 RSDS_L_AD3: 64 RSDS_R
+ SG_ RSDS_L_ObjID_5 : 15|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjExistProb_5 : 23|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjObstacleProb_5 : 18|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistX_5 : 29|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistY_5 : 33|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelX_5 : 79|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelY_5 : 82|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelX_5 : 54|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelY_5 : 143|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistXStd_5 : 101|6@0+ (0.1,0.0) [0.0|3.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistYStd_5 : 111|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelXStd_5 : 105|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelYStd_5 : 115|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelXStd_5 : 149|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelYStd_5 : 159|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjWidth_5 : 153|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjLength_5 : 175|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjID_6 : 335|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjExistProb_6 : 343|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjObstacleProb_6 : 338|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistX_6 : 349|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistY_6 : 353|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelX_6 : 399|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelY_6 : 402|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelX_6 : 374|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelAccelY_6 : 463|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistXStd_6 : 421|6@0+ (0.1,0.0) [0.0|3.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjDistYStd_6 : 431|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelXStd_6 : 425|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRelVelYStd_6 : 435|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelXStd_6 : 469|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjRAccelYStd_6 : 479|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjWidth_6 : 473|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_VFC_ObjLength_6 : 495|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum15 : 7|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum16 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum17 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum19 : 327|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum20 : 391|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum21 : 455|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter15 : 59|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter16 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter17 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter19 : 379|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter20 : 443|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter21 : 507|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjMeasured_5 : 497|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_L_ObjMeasured_6 : 499|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum18 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Rollingcounter18 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ BlockCounter3 : 236|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+BO_ 1091 RSDS_R_AD1: 64 RSDS_R
+ SG_ RSDS_R_hdr_ErrorStatus : 181|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_hdr_TimeStamp : 207|27@0+ (0.00097,0.0) [0.0|65536.0] "s" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjID_1 : 15|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjExistProb_1 : 23|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjObstacleProb_1 : 18|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistX_1 : 29|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistY_1 : 33|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelX_1 : 79|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelY_1 : 82|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelX_1 : 54|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelY_1 : 143|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistXStd_1 : 101|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistYStd_1 : 111|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelXStd_1 : 105|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelYStd_1 : 115|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelXStd_1 : 149|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelYStd_1 : 159|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjWidth_1 : 153|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjLength_1 : 175|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjID_2 : 335|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjExistProb_2 : 343|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjObstacleProb_2 : 338|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistX_2 : 349|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistY_2 : 353|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelX_2 : 399|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelY_2 : 402|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelX_2 : 374|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelY_2 : 463|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistXStd_2 : 421|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistYStd_2 : 431|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelXStd_2 : 425|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelYStd_2 : 435|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelXStd_2 : 469|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelYStd_2 : 479|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjWidth_2 : 473|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjLength_2 : 495|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum22 : 7|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum23 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum24 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum26 : 327|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum27 : 391|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum28 : 455|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter22 : 59|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter23 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter24 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter26 : 379|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter27 : 443|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter28 : 507|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjMeasured_1 : 497|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjMeasured_2 : 499|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_BLIND : 177|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_hdr_TimerStempStatus : 228|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum25 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Rollingcounter25 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ BlockCounter4 : 236|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_hdr_AutosarTimeStamp : 271|26@0+ (1,0.0) [0.0|67108863] "ms" AVP,ICU1_5,IDC_L2,IDC_L3
+BO_ 1092 RSDS_R_AD2: 64 RSDS_R
+ SG_ RSDS_R_ObjID_3 : 15|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjExistProb_3 : 23|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjObstacleProb_3 : 18|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistX_3 : 29|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistY_3 : 33|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelX_3 : 79|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelY_3 : 82|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelX_3 : 54|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelY_3 : 143|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistXStd_3 : 101|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistYStd_3 : 111|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelXStd_3 : 105|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelYStd_3 : 115|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelXStd_3 : 149|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelYStd_3 : 159|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjWidth_3 : 153|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjLength_3 : 175|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjID_4 : 335|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjExistProb_4 : 343|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjObstacleProb_4 : 338|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistX_4 : 349|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistY_4 : 353|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelX_4 : 399|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelY_4 : 402|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelX_4 : 374|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelY_4 : 463|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistXStd_4 : 421|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistYStd_4 : 431|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelXStd_4 : 425|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelYStd_4 : 435|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelXStd_4 : 469|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelYStd_4 : 479|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjWidth_4 : 473|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjLength_4 : 495|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum29 : 7|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum30 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum31 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum33 : 327|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum34 : 391|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum35 : 455|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter29 : 59|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter30 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter31 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter33 : 379|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter34 : 443|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter35 : 507|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjMeasured_3 : 497|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjMeasured_4 : 499|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum32 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Rollingcounter32 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ BlockCounter5 : 236|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+BO_ 1093 RSDS_R_AD3: 64 RSDS_R
+ SG_ RSDS_R_ObjID_5 : 15|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjExistProb_5 : 23|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjObstacleProb_5 : 18|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistX_5 : 29|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistY_5 : 33|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelX_5 : 79|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelY_5 : 82|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelX_5 : 54|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelY_5 : 143|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistXStd_5 : 101|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistYStd_5 : 111|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelXStd_5 : 105|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelYStd_5 : 115|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelXStd_5 : 149|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelYStd_5 : 159|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjWidth_5 : 153|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjLength_5 : 175|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjID_6 : 335|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjExistProb_6 : 343|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjObstacleProb_6 : 338|5@0+ (0.0322581,0.0) [0.0|1.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistX_6 : 349|12@0+ (0.0625,-128.0) [-128|126.9375] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistY_6 : 353|11@0+ (0.125,-128.0) [-128.0|127.875] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelX_6 : 399|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelY_6 : 402|13@0+ (0.0312,-128.0) [-128.0|126.9976] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelX_6 : 374|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelAccelY_6 : 463|10@0+ (0.03125,-16.0) [-16.0|15.96875] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistXStd_6 : 421|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjDistYStd_6 : 431|6@0+ (0.1,0.0) [0.0|6] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelXStd_6 : 425|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRelVelYStd_6 : 435|6@0+ (0.0625,0.0) [0.0|3.9375] "mps" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelXStd_6 : 469|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjRAccelYStd_6 : 479|6@0+ (0.0625,0.0) [0.0|3.9375] "mps2" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjWidth_6 : 473|10@0+ (0.01,0.0) [0.0|5.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_VFC_ObjLength_6 : 495|10@0+ (0.05,0.0) [0.0|20.0] "m" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum36 : 7|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum37 : 71|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum38 : 135|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum40 : 327|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum41 : 391|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum42 : 455|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter36 : 59|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter37 : 123|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter38 : 187|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter40 : 379|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter41 : 443|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RollingCounter42 : 507|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjMeasured_5 : 497|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ RSDS_R_ObjMeasured_6 : 499|2@0+ (1.0,0.0) [0.0|3] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Checksum39 : 199|8@0+ (1.0,0.0) [0.0|255.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ Rollingcounter39 : 251|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+ SG_ BlockCounter6 : 236|4@0+ (1.0,0.0) [0.0|15.0] "" AVP,ICU1_5,IDC_L2,IDC_L3
+
+
+CM_ SG_ 367 RSDS_ObjRelAccelY_Le "/";
+CM_ SG_ 367 Checksum_RSDS_R_2 "/";
+CM_ SG_ 367 RSDS_Brk_ErrSts "/";
+CM_ SG_ 367 RSDS_BrkgReq "/";
+CM_ SG_ 367 RSDS_BrkgReqVal "/";
+CM_ SG_ 367 RSDS_LEDLightReqLeft "/";
+CM_ SG_ 367 RSDS_LEDLightReqRight "/";
+CM_ SG_ 367 RSDS_IPSoundReq "/";
+CM_ SG_ 367 RSDS_RCW_Trigger "/";
+CM_ SG_ 367 RSDS_ErrSts "/";
+CM_ SG_ 367 RSDS_BrkgTrig "/";
+CM_ SG_ 367 RSDS_BliSts "/";
+CM_ SG_ 367 RSDS_TrailerSts "/";
+CM_ SG_ 367 RSDS_LCAResp "/";
+CM_ SG_ 367 RSDS_CTA_Actv "/";
+CM_ SG_ 367 RSDS_DOWResp "/";
+CM_ SG_ 367 RSDS_RCWResp "/";
+CM_ SG_ 367 RSDS_RCTAResp "/";
+CM_ SG_ 367 RSDS_RCTABrkAResp "/";
+CM_ SG_ 367 BSD_LCA_warningReqRight "/";
+CM_ SG_ 367 BSD_LCA_warningReqleft "/";
+CM_ SG_ 367 DOW_warningReqRight "/";
+CM_ SG_ 367 DOW_warningReqleft "/";
+CM_ SG_ 367 RCTA_warningReqRight "/";
+CM_ SG_ 367 RCTA_warningReqLeft "/";
+CM_ SG_ 367 RollingCounter_RSDS_R_2 "/";
+CM_ SG_ 367 Checksum_RSDS_R_3 "/";
+CM_ SG_ 367 LeTarSts "/";
+CM_ SG_ 367 ObjIDLe "/";
+CM_ SG_ 367 ObjLgtPosnCurvLe "/";
+CM_ SG_ 367 ObjLatPosnCurvLe "/";
+CM_ SG_ 367 ObjLgtSpdCurvLe "/";
+CM_ SG_ 367 ObjLatSpdCurvLe "/";
+CM_ SG_ 367 ObjTTCLe "/";
+CM_ SG_ 367 RollingCounter_RSDS_R_3 "/";
+CM_ SG_ 367 Checksum_RSDS_R_4 "/";
+CM_ SG_ 367 ObjLenLe "/";
+CM_ SG_ 367 ObjWidthLe "/";
+CM_ SG_ 367 ObjStatyLe "/";
+CM_ SG_ 367 ZoneIndLe "/";
+CM_ SG_ 367 ObjStsLe "/";
+CM_ SG_ 367 ObjRinRi "/";
+CM_ SG_ 367 ObjWidthRi "/";
+CM_ SG_ 367 ObjStatyRi "/";
+CM_ SG_ 367 ZoneIndRi "/";
+CM_ SG_ 367 ObjStsRi "/";
+CM_ SG_ 367 RollingCounter_RSDS_R_4 "/";
+CM_ SG_ 367 Checksum_RSDS_R_5 "/";
+CM_ SG_ 367 RiTarSts "/";
+CM_ SG_ 367 ObjIDRi "/";
+CM_ SG_ 367 ObjLgtPosnCurvRi "/";
+CM_ SG_ 367 ObjLatPosnCurvRi "/";
+CM_ SG_ 367 ObjLgtSpdCurvRi "/";
+CM_ SG_ 367 ObjLatSpdCurvRi "/";
+CM_ SG_ 367 ObjTTCRi "/";
+CM_ SG_ 367 RollingCounter_RSDS_R_5 "/";
+CM_ SG_ 367 RSDS_ObjDistXStd_Le "/";
+CM_ SG_ 367 RSDS_ObjDistYStd_Le "/";
+CM_ SG_ 367 RSDS_ObjRelVelXStd_Le "/";
+CM_ SG_ 367 RSDS_ObjRelVelYStd_Le "/";
+CM_ SG_ 367 RSDS_ObjRAccelXStd_Le "/";
+CM_ SG_ 367 RSDS_ObjRAccelYStd_Le "/";
+CM_ SG_ 367 RSDS_ObjDistXStd_Ri "/";
+CM_ SG_ 367 RSDS_ObjDistYStd_Ri "/";
+CM_ SG_ 367 RSDS_ObjRelVelXStd_Ri "/";
+CM_ SG_ 367 RSDS_ObjRelVelYStd_Ri "/";
+CM_ SG_ 367 RSDS_ObjRAccelXStd_Ri "/";
+CM_ SG_ 367 RSDS_ObjRAccelYStd_Ri "/";
+CM_ SG_ 367 RSDS_ObjRelAccelX_Le "/";
+CM_ SG_ 367 RSDS_ObjRelAccelX_Ri "/";
+CM_ SG_ 367 RSDS_ObjRelAccelY_Ri "/";
+CM_ SG_ 778 RCTA_B_TTC "/";
+CM_ SG_ 778 BSD_LCA_Left_TTC "/";
+CM_ SG_ 778 BSD_LCA_Right_TTC "/";
+CM_ SG_ 778 RCW_TTC "/";
+CM_ SG_ 778 RSDS_LeTgt_01 "/";
+CM_ SG_ 778 RSDS_LeTgt_01_dx "/";
+CM_ SG_ 778 RSDS_LeTgt_01_dy "/";
+CM_ SG_ 778 RSDS_LeTgt_02 "/";
+CM_ SG_ 778 RSDS_LeTgt_02_dx "/";
+CM_ SG_ 778 RSDS_LeTgt_02_dy "/";
+CM_ SG_ 778 RSDS_RiTgt_01 "/";
+CM_ SG_ 778 RSDS_RiTgt_01_dx "/";
+CM_ SG_ 778 RSDS_RiTgt_01_dy "/";
+CM_ SG_ 778 RSDS_RiTgt_02 "/";
+CM_ SG_ 778 RSDS_RiTgt_02_dx "/";
+CM_ SG_ 778 RSDS_RiTgt_02_dy "/";
+CM_ SG_ 778 RSDS_MidTgt_01 "/";
+CM_ SG_ 778 RSDS_MidTgt_01_dx "/";
+CM_ SG_ 778 RSDS_MidTgt_01_dy "/";
+CM_ SG_ 778 RSDS_MidTgt_02 "/";
+CM_ SG_ 778 RSDS_MidTgt_02_dx "/";
+CM_ SG_ 778 RSDS_MidTgt_02_dy "/";
+CM_ SG_ 1088 RSDS_L_hdr_ErrorStatus "/";
+CM_ SG_ 1088 RSDS_L_hdr_TimeStamp "/";
+CM_ SG_ 1088 RSDS_L_ObjID_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjExistProb_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjObstacleProb_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistX_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistY_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelX_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelY_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelAccelX_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelAccelY_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistXStd_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistYStd_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelXStd_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelYStd_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRAccelXStd_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjRAccelYStd_1 "/";
+CM_ SG_ 1088 RSDS_L_VFC_ObjWidth_1 "/";
+CM_ SG_ 1088 RSDS_L_VFC_ObjLength_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjID_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjExistProb_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjObstacleProb_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistX_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistY_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelX_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelY_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelAccelX_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelAccelY_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistXStd_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjDistYStd_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelXStd_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRelVelYStd_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRAccelXStd_2 "/";
+CM_ SG_ 1088 RSDS_L_ObjRAccelYStd_2 "/";
+CM_ SG_ 1088 RSDS_L_VFC_ObjWidth_2 "/";
+CM_ SG_ 1088 RSDS_L_VFC_ObjLength_2 "/";
+CM_ SG_ 1088 Checksum1 "/";
+CM_ SG_ 1088 Checksum2 "/";
+CM_ SG_ 1088 Checksum3 "/";
+CM_ SG_ 1088 Checksum4 "/";
+CM_ SG_ 1088 Checksum5 "/";
+CM_ SG_ 1088 Checksum6 "/";
+CM_ SG_ 1088 Checksum7 "/";
+CM_ SG_ 1088 RollingCounter1 "/";
+CM_ SG_ 1088 RollingCounter2 "/";
+CM_ SG_ 1088 RollingCounter3 "/";
+CM_ SG_ 1088 RollingCounter4 "/";
+CM_ SG_ 1088 RollingCounter5 "/";
+CM_ SG_ 1088 RollingCounter6 "/";
+CM_ SG_ 1088 RollingCounter7 "/";
+CM_ SG_ 1088 RSDS_L_ObjMeasured_1 "/";
+CM_ SG_ 1088 RSDS_L_ObjMeasured_2 "/";
+CM_ SG_ 1088 RSDS_L_BLIND "/";
+CM_ SG_ 1088 RSDS_L_hdr_TimerStempStatus "/";
+CM_ SG_ 1088 BlockCounter1 "/";
+CM_ SG_ 1088 RSDS_L_hdr_AutosarTimeStamp "/";
+CM_ SG_ 1089 RSDS_L_ObjID_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjExistProb_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjObstacleProb_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistX_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistY_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelX_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelY_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelAccelX_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelAccelY_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistXStd_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistYStd_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelXStd_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelYStd_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRAccelXStd_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjRAccelYStd_3 "/";
+CM_ SG_ 1089 RSDS_L_VFC_ObjWidth_3 "/";
+CM_ SG_ 1089 RSDS_L_VFC_ObjLength_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjID_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjExistProb_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjObstacleProb_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistX_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistY_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelX_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelY_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelAccelX_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelAccelY_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistXStd_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjDistYStd_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelXStd_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRelVelYStd_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRAccelXStd_4 "/";
+CM_ SG_ 1089 RSDS_L_ObjRAccelYStd_4 "/";
+CM_ SG_ 1089 RSDS_L_VFC_ObjWidth_4 "/";
+CM_ SG_ 1089 RSDS_L_VFC_ObjLength_4 "/";
+CM_ SG_ 1089 Checksum8 "/";
+CM_ SG_ 1089 Checksum9 "/";
+CM_ SG_ 1089 Checksum10 "/";
+CM_ SG_ 1089 Checksum12 "/";
+CM_ SG_ 1089 Checksum13 "/";
+CM_ SG_ 1089 Checksum14 "/";
+CM_ SG_ 1089 RollingCounter8 "/";
+CM_ SG_ 1089 RollingCounter9 "/";
+CM_ SG_ 1089 RollingCounter10 "/";
+CM_ SG_ 1089 RollingCounter12 "/";
+CM_ SG_ 1089 RollingCounter13 "/";
+CM_ SG_ 1089 RollingCounter14 "/";
+CM_ SG_ 1089 RSDS_L_ObjMeasured_3 "/";
+CM_ SG_ 1089 RSDS_L_ObjMeasured_4 "/";
+CM_ SG_ 1089 Checksum11 "/";
+CM_ SG_ 1089 Rollingcounter11 "/";
+CM_ SG_ 1089 BlockCounter2 "/";
+CM_ SG_ 1090 RSDS_L_ObjID_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjExistProb_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjObstacleProb_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistX_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistY_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelX_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelY_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelAccelX_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelAccelY_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistXStd_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistYStd_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelXStd_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelYStd_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRAccelXStd_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjRAccelYStd_5 "/";
+CM_ SG_ 1090 RSDS_L_VFC_ObjWidth_5 "/";
+CM_ SG_ 1090 RSDS_L_VFC_ObjLength_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjID_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjExistProb_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjObstacleProb_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistX_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistY_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelX_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelY_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelAccelX_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelAccelY_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistXStd_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjDistYStd_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelXStd_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRelVelYStd_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRAccelXStd_6 "/";
+CM_ SG_ 1090 RSDS_L_ObjRAccelYStd_6 "/";
+CM_ SG_ 1090 RSDS_L_VFC_ObjWidth_6 "/";
+CM_ SG_ 1090 RSDS_L_VFC_ObjLength_6 "/";
+CM_ SG_ 1090 Checksum15 "/";
+CM_ SG_ 1090 Checksum16 "/";
+CM_ SG_ 1090 Checksum17 "/";
+CM_ SG_ 1090 Checksum19 "/";
+CM_ SG_ 1090 Checksum20 "/";
+CM_ SG_ 1090 Checksum21 "/";
+CM_ SG_ 1090 RollingCounter15 "/";
+CM_ SG_ 1090 RollingCounter16 "/";
+CM_ SG_ 1090 RollingCounter17 "/";
+CM_ SG_ 1090 RollingCounter19 "/";
+CM_ SG_ 1090 RollingCounter20 "/";
+CM_ SG_ 1090 RollingCounter21 "/";
+CM_ SG_ 1090 RSDS_L_ObjMeasured_5 "/";
+CM_ SG_ 1090 RSDS_L_ObjMeasured_6 "/";
+CM_ SG_ 1090 Checksum18 "/";
+CM_ SG_ 1090 Rollingcounter18 "/";
+CM_ SG_ 1090 BlockCounter3 "/";
+CM_ SG_ 1091 RSDS_R_hdr_ErrorStatus "/";
+CM_ SG_ 1091 RSDS_R_hdr_TimeStamp "/";
+CM_ SG_ 1091 RSDS_R_ObjID_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjExistProb_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjObstacleProb_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistX_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistY_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelX_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelY_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelAccelX_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelAccelY_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistXStd_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistYStd_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelXStd_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelYStd_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRAccelXStd_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjRAccelYStd_1 "/";
+CM_ SG_ 1091 RSDS_R_VFC_ObjWidth_1 "/";
+CM_ SG_ 1091 RSDS_R_VFC_ObjLength_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjID_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjExistProb_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjObstacleProb_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistX_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistY_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelX_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelY_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelAccelX_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelAccelY_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistXStd_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjDistYStd_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelXStd_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRelVelYStd_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRAccelXStd_2 "/";
+CM_ SG_ 1091 RSDS_R_ObjRAccelYStd_2 "/";
+CM_ SG_ 1091 RSDS_R_VFC_ObjWidth_2 "/";
+CM_ SG_ 1091 RSDS_R_VFC_ObjLength_2 "/";
+CM_ SG_ 1091 Checksum22 "/";
+CM_ SG_ 1091 Checksum23 "/";
+CM_ SG_ 1091 Checksum24 "/";
+CM_ SG_ 1091 Checksum26 "/";
+CM_ SG_ 1091 Checksum27 "/";
+CM_ SG_ 1091 Checksum28 "/";
+CM_ SG_ 1091 RollingCounter22 "/";
+CM_ SG_ 1091 RollingCounter23 "/";
+CM_ SG_ 1091 RollingCounter24 "/";
+CM_ SG_ 1091 RollingCounter26 "/";
+CM_ SG_ 1091 RollingCounter27 "/";
+CM_ SG_ 1091 RollingCounter28 "/";
+CM_ SG_ 1091 RSDS_R_ObjMeasured_1 "/";
+CM_ SG_ 1091 RSDS_R_ObjMeasured_2 "/";
+CM_ SG_ 1091 RSDS_R_BLIND "/";
+CM_ SG_ 1091 RSDS_R_hdr_TimerStempStatus "/";
+CM_ SG_ 1091 Checksum25 "/";
+CM_ SG_ 1091 Rollingcounter25 "/";
+CM_ SG_ 1091 BlockCounter4 "/";
+CM_ SG_ 1091 RSDS_R_hdr_AutosarTimeStamp "/";
+CM_ SG_ 1092 RSDS_R_ObjID_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjExistProb_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjObstacleProb_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistX_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistY_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelX_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelY_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelAccelX_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelAccelY_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistXStd_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistYStd_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelXStd_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelYStd_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRAccelXStd_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjRAccelYStd_3 "/";
+CM_ SG_ 1092 RSDS_R_VFC_ObjWidth_3 "/";
+CM_ SG_ 1092 RSDS_R_VFC_ObjLength_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjID_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjExistProb_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjObstacleProb_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistX_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistY_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelX_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelY_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelAccelX_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelAccelY_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistXStd_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjDistYStd_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelXStd_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRelVelYStd_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRAccelXStd_4 "/";
+CM_ SG_ 1092 RSDS_R_ObjRAccelYStd_4 "/";
+CM_ SG_ 1092 RSDS_R_VFC_ObjWidth_4 "/";
+CM_ SG_ 1092 RSDS_R_VFC_ObjLength_4 "/";
+CM_ SG_ 1092 Checksum29 "/";
+CM_ SG_ 1092 Checksum30 "/";
+CM_ SG_ 1092 Checksum31 "/";
+CM_ SG_ 1092 Checksum33 "/";
+CM_ SG_ 1092 Checksum34 "/";
+CM_ SG_ 1092 Checksum35 "/";
+CM_ SG_ 1092 RollingCounter29 "/";
+CM_ SG_ 1092 RollingCounter30 "/";
+CM_ SG_ 1092 RollingCounter31 "/";
+CM_ SG_ 1092 RollingCounter33 "/";
+CM_ SG_ 1092 RollingCounter34 "/";
+CM_ SG_ 1092 RollingCounter35 "/";
+CM_ SG_ 1092 RSDS_R_ObjMeasured_3 "/";
+CM_ SG_ 1092 RSDS_R_ObjMeasured_4 "/";
+CM_ SG_ 1092 Checksum32 "/";
+CM_ SG_ 1092 Rollingcounter32 "/";
+CM_ SG_ 1092 BlockCounter5 "/";
+CM_ SG_ 1093 RSDS_R_ObjID_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjExistProb_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjObstacleProb_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistX_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistY_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelX_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelY_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelAccelX_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelAccelY_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistXStd_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistYStd_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelXStd_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelYStd_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRAccelXStd_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjRAccelYStd_5 "/";
+CM_ SG_ 1093 RSDS_R_VFC_ObjWidth_5 "/";
+CM_ SG_ 1093 RSDS_R_VFC_ObjLength_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjID_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjExistProb_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjObstacleProb_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistX_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistY_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelX_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelY_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelAccelX_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelAccelY_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistXStd_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjDistYStd_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelXStd_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRelVelYStd_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRAccelXStd_6 "/";
+CM_ SG_ 1093 RSDS_R_ObjRAccelYStd_6 "/";
+CM_ SG_ 1093 RSDS_R_VFC_ObjWidth_6 "/";
+CM_ SG_ 1093 RSDS_R_VFC_ObjLength_6 "/";
+CM_ SG_ 1093 Checksum36 "/";
+CM_ SG_ 1093 Checksum37 "/";
+CM_ SG_ 1093 Checksum38 "/";
+CM_ SG_ 1093 Checksum40 "/";
+CM_ SG_ 1093 Checksum41 "/";
+CM_ SG_ 1093 Checksum42 "/";
+CM_ SG_ 1093 RollingCounter36 "/";
+CM_ SG_ 1093 RollingCounter37 "/";
+CM_ SG_ 1093 RollingCounter38 "/";
+CM_ SG_ 1093 RollingCounter40 "/";
+CM_ SG_ 1093 RollingCounter41 "/";
+CM_ SG_ 1093 RollingCounter42 "/";
+CM_ SG_ 1093 RSDS_R_ObjMeasured_5 "/";
+CM_ SG_ 1093 RSDS_R_ObjMeasured_6 "/";
+CM_ SG_ 1093 Checksum39 "/";
+CM_ SG_ 1093 Rollingcounter39 "/";
+CM_ SG_ 1093 BlockCounter6 "/";
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_ "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Periodic","Event","IfActive","POE","PA","Mixed";
+BA_DEF_ BO_ "CANFD_BRS" ENUM "1.0","0.0";
+BA_DEF_ SG_ "EventCommandSignal" ENUM "No","Yes";
+BA_DEF_ SG_ "GatewayedSignals" ENUM "No","Yes";
+BA_DEF_ SG_ "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_ "GenSigInvalidValue" INT 0 0;
+BA_DEF_ SG_ "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_ "GenSigTimeoutValue" INT 0 0;
+BA_DEF_ SG_ "Remark" STRING "*";
+BA_DEF_ "DBName" STRING;
+BA_DEF_ "BusType" STRING;
+BA_DEF_ BU_ "NodeLayerModules" STRING ;
+BA_DEF_ BU_ "ECU" STRING ;
+BA_DEF_ BU_ "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_ "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_ "CANoeDrift" INT 0 0;
+BA_DEF_ BU_ "CANoeStartDelay" INT 0 0;
+BA_DEF_ BO_ "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_DEF_DEF_ "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_ "GenMsgSendType" "Periodic";
+BA_DEF_DEF_ "CANFD_BRS" "1.0";
+BA_DEF_DEF_ "EventCommandSignal" "No";
+BA_DEF_DEF_ "GatewayedSignals" "No";
+BA_DEF_DEF_ "GenSigInactiveValue" 0;
+BA_DEF_DEF_ "GenSigInvalidValue" 0;
+BA_DEF_DEF_ "GenSigStartValue" 0;
+BA_DEF_DEF_ "GenSigTimeoutValue" 0;
+BA_DEF_DEF_ "Remark" "*";
+BA_DEF_DEF_ "DBName" "";
+BA_DEF_DEF_ "BusType" "";
+BA_DEF_DEF_ "NodeLayerModules" "";
+BA_DEF_DEF_ "ECU" "";
+BA_DEF_DEF_ "CANoeJitterMax" 0;
+BA_DEF_DEF_ "CANoeJitterMin" 0;
+BA_DEF_DEF_ "CANoeDrift" 0;
+BA_DEF_DEF_ "CANoeStartDelay" 0;
+BA_DEF_DEF_ "VFrameFormat" "StandardCAN";
+BA_ "GenMsgSendType" BO_ 367 0;
+BA_ "GenMsgCycleTime" BO_ 367 20.0;
+BA_ "VFrameFormat" BO_ 367 14;
+BA_ "GenMsgSendType" BO_ 778 0;
+BA_ "GenMsgCycleTime" BO_ 778 200.0;
+BA_ "VFrameFormat" BO_ 778 14;
+BA_ "GenMsgSendType" BO_ 1088 1;
+BA_ "VFrameFormat" BO_ 1088 14;
+BA_ "GenMsgSendType" BO_ 1089 1;
+BA_ "VFrameFormat" BO_ 1089 14;
+BA_ "GenMsgSendType" BO_ 1090 1;
+BA_ "VFrameFormat" BO_ 1090 14;
+BA_ "GenMsgSendType" BO_ 1091 1;
+BA_ "VFrameFormat" BO_ 1091 14;
+BA_ "GenMsgSendType" BO_ 1092 1;
+BA_ "VFrameFormat" BO_ 1092 14;
+BA_ "GenMsgSendType" BO_ 1093 1;
+BA_ "VFrameFormat" BO_ 1093 14;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelAccelY_Le 512;
+BA_ "GenSigStartValue" SG_ 367 Checksum_RSDS_R_2 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_Brk_ErrSts 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_BrkgReq 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_BrkgReqVal 200;
+BA_ "GenSigStartValue" SG_ 367 RSDS_LEDLightReqLeft 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_LEDLightReqRight 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_IPSoundReq 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_RCW_Trigger 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ErrSts 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_BrkgTrig 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_BliSts 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_TrailerSts 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_LCAResp 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_CTA_Actv 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_DOWResp 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_RCWResp 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_RCTAResp 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_RCTABrkAResp 0;
+BA_ "GenSigStartValue" SG_ 367 BSD_LCA_warningReqRight 0;
+BA_ "GenSigStartValue" SG_ 367 BSD_LCA_warningReqleft 0;
+BA_ "GenSigStartValue" SG_ 367 DOW_warningReqRight 0;
+BA_ "GenSigStartValue" SG_ 367 DOW_warningReqleft 0;
+BA_ "GenSigStartValue" SG_ 367 RCTA_warningReqRight 0;
+BA_ "GenSigStartValue" SG_ 367 RCTA_warningReqLeft 0;
+BA_ "GenSigStartValue" SG_ 367 RollingCounter_RSDS_R_2 0;
+BA_ "GenSigStartValue" SG_ 367 Checksum_RSDS_R_3 0;
+BA_ "GenSigStartValue" SG_ 367 LeTarSts 2;
+BA_ "GenSigStartValue" SG_ 367 ObjIDLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLgtPosnCurvLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLatPosnCurvLe 128;
+BA_ "GenSigStartValue" SG_ 367 ObjLgtSpdCurvLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLatSpdCurvLe 64;
+BA_ "GenSigStartValue" SG_ 367 ObjTTCLe 127;
+BA_ "GenSigStartValue" SG_ 367 RollingCounter_RSDS_R_3 0;
+BA_ "GenSigStartValue" SG_ 367 Checksum_RSDS_R_4 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLenLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjWidthLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjStatyLe 0;
+BA_ "GenSigStartValue" SG_ 367 ZoneIndLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjStsLe 0;
+BA_ "GenSigStartValue" SG_ 367 ObjRinRi 0;
+BA_ "GenSigStartValue" SG_ 367 ObjWidthRi 0;
+BA_ "GenSigStartValue" SG_ 367 ObjStatyRi 0;
+BA_ "GenSigStartValue" SG_ 367 ZoneIndRi 0;
+BA_ "GenSigStartValue" SG_ 367 ObjStsRi 0;
+BA_ "GenSigStartValue" SG_ 367 RollingCounter_RSDS_R_4 0;
+BA_ "GenSigStartValue" SG_ 367 Checksum_RSDS_R_5 0;
+BA_ "GenSigStartValue" SG_ 367 RiTarSts 2;
+BA_ "GenSigStartValue" SG_ 367 ObjIDRi 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLgtPosnCurvRi 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLatPosnCurvRi 128;
+BA_ "GenSigStartValue" SG_ 367 ObjLgtSpdCurvRi 0;
+BA_ "GenSigStartValue" SG_ 367 ObjLatSpdCurvRi 64;
+BA_ "GenSigStartValue" SG_ 367 ObjTTCRi 127;
+BA_ "GenSigStartValue" SG_ 367 RollingCounter_RSDS_R_5 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjDistXStd_Le 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjDistYStd_Le 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelVelXStd_Le 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelVelYStd_Le 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRAccelXStd_Le 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRAccelYStd_Le 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjDistXStd_Ri 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjDistYStd_Ri 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelVelXStd_Ri 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelVelYStd_Ri 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRAccelXStd_Ri 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRAccelYStd_Ri 0;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelAccelX_Le 512;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelAccelX_Ri 512;
+BA_ "GenSigStartValue" SG_ 367 RSDS_ObjRelAccelY_Ri 512;
+BA_ "GenSigStartValue" SG_ 778 RCTA_B_TTC 0;
+BA_ "GenSigStartValue" SG_ 778 BSD_LCA_Left_TTC 0;
+BA_ "GenSigStartValue" SG_ 778 BSD_LCA_Right_TTC 0;
+BA_ "GenSigStartValue" SG_ 778 RCW_TTC 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_LeTgt_01 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_LeTgt_01_dx 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_LeTgt_01_dy 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_LeTgt_02 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_LeTgt_02_dx 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_LeTgt_02_dy 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_RiTgt_01 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_RiTgt_01_dx 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_RiTgt_01_dy 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_RiTgt_02 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_RiTgt_02_dx 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_RiTgt_02_dy 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_MidTgt_01 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_MidTgt_01_dx 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_MidTgt_01_dy 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_MidTgt_02 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_MidTgt_02_dx 0;
+BA_ "GenSigStartValue" SG_ 778 RSDS_MidTgt_02_dy 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_hdr_ErrorStatus 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_hdr_TimeStamp 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjID_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjExistProb_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjObstacleProb_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistX_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistY_1 1024;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelX_1 4102;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelY_1 4102;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelAccelX_1 512;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelAccelY_1 512;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistXStd_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistYStd_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelXStd_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelYStd_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRAccelXStd_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRAccelYStd_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_VFC_ObjWidth_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_VFC_ObjLength_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjID_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjExistProb_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjObstacleProb_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistX_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistY_2 1024;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelX_2 4102;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelY_2 4102;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelAccelX_2 512;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelAccelY_2 512;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistXStd_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjDistYStd_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelXStd_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRelVelYStd_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRAccelXStd_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjRAccelYStd_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_VFC_ObjWidth_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_VFC_ObjLength_2 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum1 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum2 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum3 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum4 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum5 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum6 0;
+BA_ "GenSigStartValue" SG_ 1088 Checksum7 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter1 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter2 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter3 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter4 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter5 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter6 0;
+BA_ "GenSigStartValue" SG_ 1088 RollingCounter7 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjMeasured_1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_ObjMeasured_2 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_BLIND 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_hdr_TimerStempStatus 0;
+BA_ "GenSigStartValue" SG_ 1088 BlockCounter1 0;
+BA_ "GenSigStartValue" SG_ 1088 RSDS_L_hdr_AutosarTimeStamp 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjID_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjExistProb_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjObstacleProb_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistX_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistY_3 1024;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelX_3 4102;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelY_3 4102;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelAccelX_3 512;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelAccelY_3 512;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistXStd_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistYStd_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelXStd_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelYStd_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRAccelXStd_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRAccelYStd_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_VFC_ObjWidth_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_VFC_ObjLength_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjID_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjExistProb_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjObstacleProb_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistX_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistY_4 1024;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelX_4 4102;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelY_4 4102;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelAccelX_4 512;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelAccelY_4 512;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistXStd_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjDistYStd_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelXStd_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRelVelYStd_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRAccelXStd_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjRAccelYStd_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_VFC_ObjWidth_4 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_VFC_ObjLength_4 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum8 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum9 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum10 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum12 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum13 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum14 0;
+BA_ "GenSigStartValue" SG_ 1089 RollingCounter8 0;
+BA_ "GenSigStartValue" SG_ 1089 RollingCounter9 0;
+BA_ "GenSigStartValue" SG_ 1089 RollingCounter10 0;
+BA_ "GenSigStartValue" SG_ 1089 RollingCounter12 0;
+BA_ "GenSigStartValue" SG_ 1089 RollingCounter13 0;
+BA_ "GenSigStartValue" SG_ 1089 RollingCounter14 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjMeasured_3 0;
+BA_ "GenSigStartValue" SG_ 1089 RSDS_L_ObjMeasured_4 0;
+BA_ "GenSigStartValue" SG_ 1089 Checksum11 0;
+BA_ "GenSigStartValue" SG_ 1089 Rollingcounter11 0;
+BA_ "GenSigStartValue" SG_ 1089 BlockCounter2 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjID_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjExistProb_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjObstacleProb_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistX_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistY_5 1024;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelX_5 4102;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelY_5 4102;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelAccelX_5 512;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelAccelY_5 512;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistXStd_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistYStd_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelXStd_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelYStd_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRAccelXStd_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRAccelYStd_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_VFC_ObjWidth_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_VFC_ObjLength_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjID_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjExistProb_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjObstacleProb_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistX_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistY_6 1024;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelX_6 4102;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelY_6 4102;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelAccelX_6 512;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelAccelY_6 512;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistXStd_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjDistYStd_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelXStd_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRelVelYStd_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRAccelXStd_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjRAccelYStd_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_VFC_ObjWidth_6 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_VFC_ObjLength_6 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum15 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum16 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum17 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum19 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum20 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum21 0;
+BA_ "GenSigStartValue" SG_ 1090 RollingCounter15 0;
+BA_ "GenSigStartValue" SG_ 1090 RollingCounter16 0;
+BA_ "GenSigStartValue" SG_ 1090 RollingCounter17 0;
+BA_ "GenSigStartValue" SG_ 1090 RollingCounter19 0;
+BA_ "GenSigStartValue" SG_ 1090 RollingCounter20 0;
+BA_ "GenSigStartValue" SG_ 1090 RollingCounter21 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjMeasured_5 0;
+BA_ "GenSigStartValue" SG_ 1090 RSDS_L_ObjMeasured_6 0;
+BA_ "GenSigStartValue" SG_ 1090 Checksum18 0;
+BA_ "GenSigStartValue" SG_ 1090 Rollingcounter18 0;
+BA_ "GenSigStartValue" SG_ 1090 BlockCounter3 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_hdr_ErrorStatus 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_hdr_TimeStamp 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjID_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjExistProb_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjObstacleProb_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistX_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistY_1 1024;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelX_1 4102;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelY_1 4102;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelAccelX_1 512;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelAccelY_1 512;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistXStd_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistYStd_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelXStd_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelYStd_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRAccelXStd_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRAccelYStd_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_VFC_ObjWidth_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_VFC_ObjLength_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjID_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjExistProb_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjObstacleProb_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistX_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistY_2 1024;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelX_2 4102;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelY_2 4102;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelAccelX_2 512;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelAccelY_2 512;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistXStd_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjDistYStd_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelXStd_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRelVelYStd_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRAccelXStd_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjRAccelYStd_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_VFC_ObjWidth_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_VFC_ObjLength_2 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum22 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum23 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum24 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum26 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum27 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum28 0;
+BA_ "GenSigStartValue" SG_ 1091 RollingCounter22 0;
+BA_ "GenSigStartValue" SG_ 1091 RollingCounter23 0;
+BA_ "GenSigStartValue" SG_ 1091 RollingCounter24 0;
+BA_ "GenSigStartValue" SG_ 1091 RollingCounter26 0;
+BA_ "GenSigStartValue" SG_ 1091 RollingCounter27 0;
+BA_ "GenSigStartValue" SG_ 1091 RollingCounter28 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjMeasured_1 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_ObjMeasured_2 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_BLIND 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_hdr_TimerStempStatus 0;
+BA_ "GenSigStartValue" SG_ 1091 Checksum25 0;
+BA_ "GenSigStartValue" SG_ 1091 Rollingcounter25 0;
+BA_ "GenSigStartValue" SG_ 1091 BlockCounter4 0;
+BA_ "GenSigStartValue" SG_ 1091 RSDS_R_hdr_AutosarTimeStamp 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjID_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjExistProb_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjObstacleProb_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistX_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistY_3 1024;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelX_3 4102;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelY_3 4102;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelAccelX_3 512;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelAccelY_3 512;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistXStd_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistYStd_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelXStd_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelYStd_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRAccelXStd_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRAccelYStd_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_VFC_ObjWidth_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_VFC_ObjLength_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjID_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjExistProb_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjObstacleProb_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistX_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistY_4 1024;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelX_4 4102;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelY_4 4102;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelAccelX_4 512;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelAccelY_4 512;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistXStd_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjDistYStd_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelXStd_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRelVelYStd_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRAccelXStd_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjRAccelYStd_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_VFC_ObjWidth_4 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_VFC_ObjLength_4 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum29 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum30 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum31 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum33 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum34 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum35 0;
+BA_ "GenSigStartValue" SG_ 1092 RollingCounter29 0;
+BA_ "GenSigStartValue" SG_ 1092 RollingCounter30 0;
+BA_ "GenSigStartValue" SG_ 1092 RollingCounter31 0;
+BA_ "GenSigStartValue" SG_ 1092 RollingCounter33 0;
+BA_ "GenSigStartValue" SG_ 1092 RollingCounter34 0;
+BA_ "GenSigStartValue" SG_ 1092 RollingCounter35 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjMeasured_3 0;
+BA_ "GenSigStartValue" SG_ 1092 RSDS_R_ObjMeasured_4 0;
+BA_ "GenSigStartValue" SG_ 1092 Checksum32 0;
+BA_ "GenSigStartValue" SG_ 1092 Rollingcounter32 0;
+BA_ "GenSigStartValue" SG_ 1092 BlockCounter5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjID_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjExistProb_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjObstacleProb_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistX_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistY_5 1024;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelX_5 4102;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelY_5 4102;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelAccelX_5 512;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelAccelY_5 512;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistXStd_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistYStd_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelXStd_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelYStd_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRAccelXStd_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRAccelYStd_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_VFC_ObjWidth_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_VFC_ObjLength_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjID_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjExistProb_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjObstacleProb_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistX_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistY_6 1024;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelX_6 4102;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelY_6 4102;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelAccelX_6 512;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelAccelY_6 512;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistXStd_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjDistYStd_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelXStd_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRelVelYStd_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRAccelXStd_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjRAccelYStd_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_VFC_ObjWidth_6 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_VFC_ObjLength_6 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum36 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum37 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum38 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum40 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum41 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum42 0;
+BA_ "GenSigStartValue" SG_ 1093 RollingCounter36 0;
+BA_ "GenSigStartValue" SG_ 1093 RollingCounter37 0;
+BA_ "GenSigStartValue" SG_ 1093 RollingCounter38 0;
+BA_ "GenSigStartValue" SG_ 1093 RollingCounter40 0;
+BA_ "GenSigStartValue" SG_ 1093 RollingCounter41 0;
+BA_ "GenSigStartValue" SG_ 1093 RollingCounter42 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjMeasured_5 0;
+BA_ "GenSigStartValue" SG_ 1093 RSDS_R_ObjMeasured_6 0;
+BA_ "GenSigStartValue" SG_ 1093 Checksum39 0;
+BA_ "GenSigStartValue" SG_ 1093 Rollingcounter39 0;
+BA_ "GenSigStartValue" SG_ 1093 BlockCounter6 0;
+BA_ "BusType" "CAN FD";
+BA_ "DBName" "CANFD";
+VAL_ 367 RSDS_Brk_ErrSts 0 "No error " 1 "Error " ;
+VAL_ 367 RSDS_BrkgReq 0 "No Request" 1 "Request" ;
+VAL_ 367 RSDS_LEDLightReqLeft 0 "No warning" 1 "Warning level 1£®LED ≥£¡¡£©" 2 "Warning level 2£®LED 2Hz…¡À∏£©" 3 "Warning level 3£®LED 4Hz…¡À∏£©" ;
+VAL_ 367 RSDS_LEDLightReqRight 0 "No warning" 1 "Warning level 1£®LED ≥£¡¡£©" 2 "Warning level 2£®LED 2Hz…¡À∏£©" 3 "Warning level 3£®LED 4Hz…¡À∏£©" ;
+VAL_ 367 RSDS_IPSoundReq 0 "No warning" 1 "Warning level 1£®2Hz…˘“Ù£©" 2 "Warning level 2£®4Hz…˘“Ù£©" 3 "Warning level 3£®≥£œÏ£©" ;
+VAL_ 367 RSDS_RCW_Trigger 0 "No warning" 1 "RCW level 1" 2 "RCW level 2" 3 "Reserved" ;
+VAL_ 367 RSDS_ErrSts 0 "No Error" 1 "Error" ;
+VAL_ 367 RSDS_BrkgTrig 0 "Not tirggered" 1 "Triggered" ;
+VAL_ 367 RSDS_BliSts 0 "No Blindness" 1 "Blindness" ;
+VAL_ 367 RSDS_TrailerSts 0 "None" 1 "Trailer" ;
+VAL_ 367 RSDS_LCAResp 0 "OFF" 1 "ON" ;
+VAL_ 367 RSDS_CTA_Actv 0 "Not active" 1 "Active" ;
+VAL_ 367 RSDS_DOWResp 0 "OFF" 1 "ON" ;
+VAL_ 367 RSDS_RCWResp 0 "OFF" 1 "ON" ;
+VAL_ 367 RSDS_RCTAResp 0 "OFF" 1 "ON" ;
+VAL_ 367 RSDS_RCTABrkAResp 0 "OFF" 1 "ON" ;
+VAL_ 367 BSD_LCA_warningReqRight 0 "No warning" 1 "Warning level 1" 2 "Warning level 2" 3 "Reserved" ;
+VAL_ 367 BSD_LCA_warningReqleft 0 "No warning" 1 "Warning level 1" 2 "Warning level 2" 3 "Reserved" ;
+VAL_ 367 DOW_warningReqRight 0 "No warning" 1 "Warning level 1" 2 "Warning level 2" 3 "Reserved" ;
+VAL_ 367 DOW_warningReqleft 0 "No warning" 1 "Warning level 1" 2 "Warning level 2" 3 "Reserved" ;
+VAL_ 367 RCTA_warningReqRight 0 "No warning" 1 "Warning level 2" ;
+VAL_ 367 RCTA_warningReqLeft 0 "No warning" 1 "Warning level 2" ;
+VAL_ 367 LeTarSts 0 "Target Invalid" 1 "Target Valid" 2 "No target" 3 "Reserved" ;
+VAL_ 367 ObjStatyLe 0 "Stationary" 1 "Not Stationary" ;
+VAL_ 367 ZoneIndLe 0 "No Object in the Zone" 1 "Object in BSW Zone" 2 "Object in CVW Zone" 3 "Object in the Shared Zone" ;
+VAL_ 367 ObjStsLe 0 "Invalid" 1 "New–¬ƒø±Í" 2 "Mature≥… Ïƒø±Í" 3 "Coastedª¨––µƒ" ;
+VAL_ 367 ObjStatyRi 0 "Stationary" 1 "Not Stationary" ;
+VAL_ 367 ZoneIndRi 0 "No Object in the Zone" 1 "Object in BSW Zone" 2 "Object in CVW Zone" 3 "Object in the Shared Zone" ;
+VAL_ 367 ObjStsRi 0 "Invalid" 1 "New" 2 "Mature" 3 "Coasted" ;
+VAL_ 367 RiTarSts 0 "Target Invalid" 1 "Target Valid" 2 "No target" 3 "Reserved" ;
+VAL_ 778 RSDS_LeTgt_01 0 "No target" 1 "target detected" ;
+VAL_ 778 RSDS_LeTgt_02 0 "No target" 1 "target detected" ;
+VAL_ 778 RSDS_RiTgt_01 0 "No target" 1 "target detected" ;
+VAL_ 778 RSDS_RiTgt_02 0 "No target" 1 "target detected" ;
+VAL_ 778 RSDS_MidTgt_01 0 "No target" 1 "target detected" ;
+VAL_ 778 RSDS_MidTgt_02 0 "No target" 1 "target detected" ;
+VAL_ 1088 RSDS_L_hdr_ErrorStatus 0 "No error" 1 "Not Defined" 2 "misalignment_elevation" 3 "misalignment_azimuth" 4 "temporary failure" 5 "permanent failure" 6 "Voltage_error" 7 "Production_mode" 8 "EOL_error" 9 "Calibration parameter_error" 10 "Radar not match" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Reserved" ;
+VAL_ 1088 RSDS_L_ObjMeasured_1 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1088 RSDS_L_ObjMeasured_2 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1088 RSDS_L_BLIND 0 " No Blindness" 1 "  Blindness" 2 " Reserved" 3 " Reserved" ;
+VAL_ 1089 RSDS_L_ObjMeasured_3 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1089 RSDS_L_ObjMeasured_4 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1090 RSDS_L_ObjMeasured_5 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1090 RSDS_L_ObjMeasured_6 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1091 RSDS_R_hdr_ErrorStatus 0 "No error" 1 "Not Defined" 2 "misalignment_elevation" 3 "misalignment_azimuth" 4 "temporary failure" 5 "permanent failure" 6 "Voltage_error" 7 "Production_mode" 8 "EOL_error" 9 "Calibration parameter_error" 10 "Radar not match" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Reserved" ;
+VAL_ 1091 RSDS_R_ObjMeasured_1 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1091 RSDS_R_ObjMeasured_2 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1091 RSDS_R_BLIND 0 " No Blindness" 1 "  Blindness" 2 " Reserved" 3 " Reserved" ;
+VAL_ 1092 RSDS_R_ObjMeasured_3 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1092 RSDS_R_ObjMeasured_4 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1093 RSDS_R_ObjMeasured_5 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
+VAL_ 1093 RSDS_R_ObjMeasured_6 0 " Init" 1 " Measured" 2 " Predicted" 3 " Reserved" ;
