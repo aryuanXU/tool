@@ -5,7 +5,7 @@ import time
 import queue
 from tkinter import *
 from tkintertable import TableCanvas,TableModel
-'this is 2stchange'
+'this is 3stchange'
 colnum = 1.0
 dbc_pathT= 'nofile'
 mtx_pathT= 'nofile'
