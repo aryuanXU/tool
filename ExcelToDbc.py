@@ -3,9 +3,9 @@ import xlwt
 import queue
 import os
 
-def ExcelToDbc(msg_queue,CANFD_flag):
-    '''这个CANflag指示了excel将转换的格式为FD'''
-    prgprc = '初始化...\nproduct at 2022-08-13  x\n'
+def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
+    #这个CANflag指示了excel将转换的格式为FD
+    prgprc = '初始化...\nproduct at 2022-10-19  x\n'
     msg_queue.put(prgprc)
 
     '''该函数生成dbc要求格式的BA_属性 list 转 str'''
@@ -32,8 +32,7 @@ def ExcelToDbc(msg_queue,CANFD_flag):
             str_return = str_return.strip(',') + ';'
             return str_return
 
-    '''对 name 格式进行检查'''
-
+    #对 name 格式进行检查
     def Warning_Check(li):
         for item in li:
             if item=='':
@@ -43,8 +42,7 @@ def ExcelToDbc(msg_queue,CANFD_flag):
                 prgprc = '!!!warning {}存在空格或不规范,请自行确认'.format(item)
                 msg_queue.put(prgprc)
 
-    '''对读取到的value table 进行转化为连续table'''
-
+    #对读取到的value table 进行转化为连续table
     def Change_valueTable(valueList):
         value_return = ''
         valueList = valueList.replace('~', '-').strip('\n').split('\n')
@@ -64,7 +62,7 @@ def ExcelToDbc(msg_queue,CANFD_flag):
                 value_return = value_return + '{} "{}" '.format(eval(i[0]), i[1])
         return value_return
 
-    '''byte order 仅能通过Mo inter 字符判断 '''
+    #byte order 仅能通过Mo inter 字符判断
     transmitter_col = 1
     receiver_col =    2
     signalName_col =  3
@@ -94,7 +92,7 @@ def ExcelToDbc(msg_queue,CANFD_flag):
     dbc_write = open('target.dbc', 'a', encoding='ansi')
 
     '''打开源excel文件，预操作'''
-    excel_read = xlrd.open_workbook('矩阵.xlsx', 'r', encoding_override='utf-8')
+    excel_read = xlrd.open_workbook(mtx_pathT, 'r', encoding_override='utf-8')
     sheet_read = excel_read.sheet_by_index(3)
     rowsNum = sheet_read.nrows
     prgprc = "读取模板结束\n"
@@ -404,7 +402,7 @@ def ExcelToDbc(msg_queue,CANFD_flag):
     prgprc = '写入valuetable结束\n生成target.dbc在当前目录\n-------over------'
     msg_queue.put(prgprc)
 
-def DbcToExcel(msg_queue):
+def DbcToExcel(msg_queue,dbc_pathT):
     prgprc = '初始化....'
     msg_queue.put(prgprc)
     def VAl_StyleChange(vab):
@@ -436,155 +434,144 @@ def DbcToExcel(msg_queue):
             isanum = isanum + 1
         return [list_return[0], str_return.strip('\n')]
 
-    file_list = os.listdir()
-    dbc_count = 0
-    for i in file_list:
-        if i.count('.dbc') > 0:
-            dbc_count += 1
-            source_dbc_name = i
-
-    if dbc_count > 1 or dbc_count==0:
-        msg_queue.put('ERROR!  : no or too many *.DBC')
-        pass
-    else:
-        msg_queue.put('1/5 文件检查OK')
-        style_Lchange = xlwt.XFStyle()
-        style_Lchange.alignment.wrap = 1
-        source_dbc = open(source_dbc_name, 'r', encoding='ANSI')
-        target_excel = xlwt.Workbook(encoding='ansi')
-        target_sheet = target_excel.add_sheet('矩阵')
-        Index_excel = ['NO.', 'Transmitter', 'Receiver', 'Signal_name', 'Signal_Description', 'Message_Name', 'Message_ID',
-                       'Message_Type', 'Period(ms)', 'DLC', 'Msb', 'Lsb', 'Size(bit)', 'Byte_Order', 'Data_Type',
-                       'Default_Initiaised_value', 'Alternative_Value', 'Factor', 'Offset', 'Value_Min_P',
-                       'Value_Max_P', 'Unit', 'Coding']
-        excellist_for_write = {}
-        for i in range(0, len(Index_excel)):
-            target_sheet.write(0, i, Index_excel[i], style_Lchange)
-        msg_queue.put('2/5 首行写入OK')
-        messINFO_now = []
-        dbc_lines = source_dbc.readlines()
-        prgprc = 'hang'
-        GenAttribute_def = {}
-        GenAttribute_inialue = {}
-        Message_ini = {}
-        Signal_ini = {}
-        Signal_valTable = {}
-        for i in dbc_lines:
-            if i == '\n':
+    msg_queue.put('1/5 文件检查OK')
+    style_Lchange = xlwt.XFStyle()
+    style_Lchange.alignment.wrap = 1
+    source_dbc = open(dbc_pathT, 'r', encoding='ANSI')
+    target_excel = xlwt.Workbook(encoding='ansi')
+    target_sheet = target_excel.add_sheet('矩阵')
+    Index_excel = ['NO.', 'Transmitter', 'Receiver', 'Signal_name', 'Signal_Description', 'Message_Name', 'Message_ID',
+                   'Message_Type', 'Period(ms)', 'DLC', 'Msb', 'Lsb', 'Size(bit)', 'Byte_Order', 'Data_Type',
+                   'Default_Initiaised_value', 'Alternative_Value', 'Factor', 'Offset', 'Value_Min_P',
+                   'Value_Max_P', 'Unit', 'Coding']
+    excellist_for_write = {}
+    for i in range(0, len(Index_excel)):
+        target_sheet.write(0, i, Index_excel[i], style_Lchange)
+    msg_queue.put('2/5 首行写入OK')
+    messINFO_now = []
+    dbc_lines = source_dbc.readlines()
+    prgprc = 'hang'
+    GenAttribute_def = {}
+    GenAttribute_inialue = {}
+    Message_ini = {}
+    Signal_ini = {}
+    Signal_valTable = {}
+    for i in dbc_lines:
+        if i == '\n':
+            continue
+        if i.count('BU_:') > 0:
+            prgprc = 'start'
+            continue
+        if prgprc != 'hang':
+            if i.split(' ')[0] == 'BO_':
+                prgprc = 'mess'
+                messINFO_now = i.replace('\n', '').split(' ')
                 continue
-            if i.count('BU_:') > 0:
-                prgprc = 'start'
+            if i.strip(' ').split(' ')[0] == 'SG_':
+                prgprc = 'signal'
+                sigINFO_now = i.replace('\n', '').strip(' ').split(' ')
+                excellist_for_write[sigINFO_now[1]] = \
+                    [messINFO_now[4].strip('\n').strip(';'), sigINFO_now[7], sigINFO_now[1], '/'
+                        , messINFO_now[2].strip(':'), hex(eval(messINFO_now[1])), ''
+                        , 0, messINFO_now[3]
+                        , ['/', sigINFO_now[3].split('|')[0]][sigINFO_now[3].split('@')[1].count('0') > 0]
+                        , ['/', sigINFO_now[3].split('|')[0]][sigINFO_now[3].split('@')[1].count('1') > 0]
+                        , sigINFO_now[3].split('|')[1].split('@')[0]
+                        , ['Motorla', 'Inter'][sigINFO_now[3].split('@')[1].count('1') > 0]
+                        , ['Signed', 'Unsigned'][sigINFO_now[3].split('@')[1].count('+') > 0]
+                        , 0, '/'
+                        , sigINFO_now[4].strip('(').strip(')').split(',')[0]
+                        , sigINFO_now[4].strip('(').strip(')').split(',')[1]
+                        , sigINFO_now[5].strip('[').strip(']').split('|')[0]
+                        , sigINFO_now[5].strip('[').strip(']').split('|')[1]
+                        , [sigINFO_now[6].strip(""), '/'][sigINFO_now[6] == '""']
+                        , '/'
+                     ]
+
+            if i.split(' ')[0] == 'BO_TX_BU_':
+                prgprc = 'BO_TX_BU'
+                for j in excellist_for_write:
+                    if excellist_for_write[j][5] == i.split(' ')[1]:
+                        excellist_for_write[j][0] = i.split(' ')[3].strip(';')
+
+            if i.split(' ')[0] == 'BA_DEF_':
+                if i.count('DBName')>0 or i.count('BusType'):
+                    continue
+
+                prgprc = 'BA_DEF_'
+                i = i.strip('\n').strip(';').split(' ')
+                GenAttribute_def[i[3].strip('"')] = i[4:len(i) + 1]
                 continue
-            if prgprc != 'hang':
-                if i.split(' ')[0] == 'BO_':
-                    prgprc = 'mess'
-                    messINFO_now = i.replace('\n', '').split(' ')
-                    continue
-                if i.strip(' ').split(' ')[0] == 'SG_':
-                    prgprc = 'signal'
-                    sigINFO_now = i.replace('\n', '').strip(' ').split(' ')
-                    excellist_for_write[sigINFO_now[1]] = \
-                        [messINFO_now[4].strip('\n').strip(';'), sigINFO_now[7], sigINFO_now[1], '/'
-                            , messINFO_now[2].strip(':'), hex(eval(messINFO_now[1])), ''
-                            , 0, messINFO_now[3]
-                            , ['/', sigINFO_now[3].split('|')[0]][sigINFO_now[3].split('@')[1].count('0') > 0]
-                            , ['/', sigINFO_now[3].split('|')[0]][sigINFO_now[3].split('@')[1].count('1') > 0]
-                            , sigINFO_now[3].split('|')[1].split('@')[0]
-                            , ['Motorla', 'Inter'][sigINFO_now[3].split('@')[1].count('1') > 0]
-                            , ['Signed', 'Unsigned'][sigINFO_now[3].split('@')[1].count('+') > 0]
-                            , 0, '/'
-                            , sigINFO_now[4].strip('(').strip(')').split(',')[0]
-                            , sigINFO_now[4].strip('(').strip(')').split(',')[1]
-                            , sigINFO_now[5].strip('[').strip(']').split('|')[0]
-                            , sigINFO_now[5].strip('[').strip(']').split('|')[1]
-                            , [sigINFO_now[6].strip(""), '/'][sigINFO_now[6] == '""']
-                            , '/'
-                         ]
 
-                if i.split(' ')[0] == 'BO_TX_BU_':
-                    prgprc = 'BO_TX_BU'
-                    for j in excellist_for_write:
-                        if excellist_for_write[j][5] == i.split(' ')[1]:
-                            excellist_for_write[j][0] = i.split(' ')[3].strip(';')
+            if i.split(' ')[0] == 'BA_DEF_DEF_':
+                i = i.strip('\n').strip(';').split(' ')
+                GenAttribute_inialue[i[1].strip('"')] = i[2].strip('"')
+                prgprc = 'BA_DEF_DEF'
+                continue
 
-                if i.split(' ')[0] == 'BA_DEF_':
-                    if i.count('DBName')>0 or i.count('BusType'):
-                        continue
-
-                    prgprc = 'BA_DEF_'
+            if i.split(' ')[0] == 'BA_':
+                prgprc = 'BA_'
+                if i.count('BO_') > 0:
                     i = i.strip('\n').strip(';').split(' ')
-                    GenAttribute_def[i[3].strip('"')] = i[4:len(i) + 1]
-                    continue
-
-                if i.split(' ')[0] == 'BA_DEF_DEF_':
+                    Message_ini[i[3]] = [i[1].strip('"'), i[4]]
+                if i.count('SG_')>0:
                     i = i.strip('\n').strip(';').split(' ')
-                    GenAttribute_inialue[i[1].strip('"')] = i[2].strip('"')
-                    prgprc = 'BA_DEF_DEF'
-                    continue
+                    Signal_ini[i[4]] = [i[1].strip('"'), i[5]]
+                continue
 
-                if i.split(' ')[0] == 'BA_':
-                    prgprc = 'BA_'
-                    if i.count('BO_') > 0:
-                        i = i.strip('\n').strip(';').split(' ')
-                        Message_ini[i[3]] = [i[1].strip('"'), i[4]]
-                    if i.count('SG_')>0:
-                        i = i.strip('\n').strip(';').split(' ')
-                        Signal_ini[i[4]] = [i[1].strip('"'), i[5]]
-                    continue
-
-                if i.split(' ')[0] == 'VAL_':
-                    prgprc = 'VAL_'
-                    j = VAl_StyleChange(i)
-                    Signal_name = j[0]
-                    excellist_for_write[Signal_name][21] = j[1]
-                if i.split(' ')[0] == 'CM_':
-                    prgprc = 'CM_'
-        msg_queue.put('3/5 读取dbc OK')
-        '''下面对周期，方式，初始值进行初始化'''
-        line_doing = 1
-        col_doing = 1
-        for i in excellist_for_write:
-            for k in GenAttribute_inialue:
-                if k == 'GenMsgCycleTime':
-                    excellist_for_write[i][7] = GenAttribute_inialue[k]
-                if k == 'GenMsgSendType':
-                    excellist_for_write[i][6] = GenAttribute_inialue[k]
-                if k == 'GenSigStartValue':
-                    excellist_for_write[i][15] = GenAttribute_inialue[k]
-        '''下面对各类初始值进行赋值'''
-        for i in Message_ini:
-            for j in excellist_for_write:
-                if eval(excellist_for_write[j][5]) == eval(i):
-                    if Message_ini[i][0] == 'GenMsgCycleTime':
-                        excellist_for_write[j][7] = Message_ini[i][1]
-                    if Message_ini[i][0] == 'GenMsgSendType':
-                        excellist_for_write[j][6] = Message_ini[i][1]
-        for i in Signal_ini:
-            if Signal_ini[i] == 'GenSigStartValue':
-                excellist_for_write[i][15] = Signal_ini[i][1]
-        msg_queue.put('4/5 值的初始化OK')
-        '''下面开始遍历写入'''
-        line_doing = 1
-        col_doing = 1
-        for i in excellist_for_write:
-            for j in range(1, len(excellist_for_write[i]) + 1):
-                target_sheet.write(line_doing, j, excellist_for_write[i][j - 1])
-            line_doing = line_doing + 1
-        msg_queue.put('5/5 遍历写入OK')
-        source_dbc.close()
-        target_excel.save('target.xlsx')
-        msg_queue.put('生成target.xlsx在本地目录\n-----over-----')
+            if i.split(' ')[0] == 'VAL_':
+                prgprc = 'VAL_'
+                j = VAl_StyleChange(i)
+                Signal_name = j[0]
+                excellist_for_write[Signal_name][21] = j[1]
+            if i.split(' ')[0] == 'CM_':
+                prgprc = 'CM_'
+    msg_queue.put('3/5 读取dbc OK')
+    '''下面对周期，方式，初始值进行初始化'''
+    line_doing = 1
+    col_doing = 1
+    for i in excellist_for_write:
+        for k in GenAttribute_inialue:
+            if k == 'GenMsgCycleTime':
+                excellist_for_write[i][7] = GenAttribute_inialue[k]
+            if k == 'GenMsgSendType':
+                excellist_for_write[i][6] = GenAttribute_inialue[k]
+            if k == 'GenSigStartValue':
+                excellist_for_write[i][15] = GenAttribute_inialue[k]
+    '''下面对各类初始值进行赋值'''
+    for i in Message_ini:
+        for j in excellist_for_write:
+            if eval(excellist_for_write[j][5]) == eval(i):
+                if Message_ini[i][0] == 'GenMsgCycleTime':
+                    excellist_for_write[j][7] = Message_ini[i][1]
+                if Message_ini[i][0] == 'GenMsgSendType':
+                    excellist_for_write[j][6] = Message_ini[i][1]
+    for i in Signal_ini:
+        if Signal_ini[i] == 'GenSigStartValue':
+            excellist_for_write[i][15] = Signal_ini[i][1]
+    msg_queue.put('4/5 值的初始化OK')
+    '''下面开始遍历写入'''
+    line_doing = 1
+    col_doing = 1
+    for i in excellist_for_write:
+        for j in range(1, len(excellist_for_write[i]) + 1):
+            target_sheet.write(line_doing, j, excellist_for_write[i][j - 1])
+        line_doing = line_doing + 1
+    msg_queue.put('5/5 遍历写入OK')
+    source_dbc.close()
+    target_excel.save('target.xlsx')
+    msg_queue.put('生成target.xlsx在本地目录\n-----over-----')
 
 def iniCompare(asc_path,dbc_path,msg_queue):
     if asc_path=='nofile' or dbc_path=='nofile':
         msg_queue.put('ERROR:    no file choosed/file error')
-    else:
-        asc_read=open(asc_path,'r')
-        asc_read_text=asc_read.readlines()
-        dbc_read=open(dbc_path,'r')
-        dbc_read_text=dbc_read.readlines()
-        readAsc_iniValue(asc_read_text)
-        readDbc_iniValue(dbc_read_text)
+        return
+    asc_read=open(asc_path,'r')
+    asc_read_text=asc_read.readlines()
+    dbc_read=open(dbc_path,'r')
+    dbc_read_text=dbc_read.readlines()
+    readAsc_iniValue(asc_read_text)
+    readDbc_iniValue(dbc_read_text)
 
 def readDbc_iniValue(dbc_read_text):
 

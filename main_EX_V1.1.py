@@ -18,26 +18,27 @@ class GUI(object):
     def __init__(self):
         self.win = Tk()
         self.win.title("转换工具 EXV1.1")
+        self.win.config(bg='#F5F5F5')
         self.win.geometry('700x600')
         self.interface()
         self.msg_queue = queue.Queue()
     def interface(self):
         self.Label0          = Label (self.win, text = '----------BDC——EXCEL互转模块----------')
-        self.Button0         = Button(self.win, text = ' >转为can ',    command=self.dbc_start)
-        self.Button1         = Button(self.win, text = ' >转为canfd ',  command=self.dbcFD_start)
-        self.Button2         = Button(self.win, text = ' >转为excel ',  command=self.excel_start)
-        self.Button_opendbcT = Button(self.win, text = 'Open Dbc',     command=self.opendbcT)
-        self.Button_openmtxT = Button(self.win, text = 'Open Mtx',     command=self.openmtxT)
+        self.Button0         = Button(self.win, text = ' >CAN转  ',    command=self.dbc_start,  bg='#87CEEB')
+        self.Button1         = Button(self.win, text = ' >CANFD转 ',   command=self.dbcFD_start,bg='#87CEEB')
+        self.Button2         = Button(self.win, text = ' >转excel ',   command=self.excel_start,bg='#87CEEB')
+        self.Button_opendbcT = Button(self.win, text = 'Open Mtx',     command=self.openmtxT)
+        self.Button_openmtxT = Button(self.win, text = 'Open dbc',     command=self.opendbcT)
         self.Label_dbcpathT  = Label (self.win, text =' dbc_path')
         self.Label_mtxpathT  = Label (self.win, text = 'mtx_path')
         self.tex_dbcpathT    = Text  (self.win, width=30, height=4)
         self.tex_mtxpathT    = Text  (self.win, width=30, height=4)
         self.Label_dbcpathT.   place(x=10, y=40)
         self.Label_mtxpathT.   place(x=10, y=120)
-        self.tex_dbcpathT  .   place(x=70, y=50)
-        self.tex_mtxpathT  .   place(x=70, y=120)
+        self.tex_mtxpathT  .   place(x=70, y=50)
+        self.tex_dbcpathT  .   place(x=70, y=120)
         self.Button0       .   place(x=300,y=80)
-        self.Button1       .   place(x=380,y=80)
+        self.Button1       .   place(x=390,y=80)
         self.Button2       .   place(x=300,y=150)
         self.Button_opendbcT.  place(x=300,y=50)
         self.Button_openmtxT.  place(x=300,y=120)
@@ -72,12 +73,12 @@ class GUI(object):
         root.after(100,self.event_print,root)
 
     def dbc_start(self):
-        self.T1=threading.Thread(target=ExcelToDbc.ExcelToDbc(self.msg_queue,0))
+        self.T1=threading.Thread(target=ExcelToDbc.ExcelToDbc(self.msg_queue,0,mtx_pathT))
         self.T1.setDaemon(True)
         self.T1.start()
         self.event_print(self.win)
     def excel_start(self):
-        self.T2=threading.Thread(target=ExcelToDbc.DbcToExcel(self.msg_queue))
+        self.T2=threading.Thread(target=ExcelToDbc.DbcToExcel(self.msg_queue,dbc_pathT))
         self.T2.setDaemon(True)
         self.T2.start()
         self.event_print(self.win)
@@ -97,7 +98,6 @@ class GUI(object):
         self.T5.start()
         self.event_print(self.win)
 
-
     def iniCompare_start(self):
         self.T6 = threading.Thread(target=ExcelToDbc.iniCompare(asc_path, dbc_path, self.msg_queue))
         self.T6.setDaemon(True)
@@ -109,19 +109,16 @@ class GUI(object):
         asc_path=tkinter.filedialog.askopenfilename(title='selet a file ', initialdir='./',
                                                     filetypes=(('ASSCII Logging File', '*.asc'),))
         self.text_ascpath.insert(1.0, asc_path)
-
     def opendbc(self):
         global dbc_path
         dbc_path = tkinter.filedialog.askopenfilename(title='selet a file ', initialdir='./',
                                                       filetypes=(('dbc', '*.dbc'),))
         self.text_dbcpath.insert(1.0, dbc_path)
-
     def opendbcT(self):
         global dbc_pathT
         dbc_pathT=tkinter.filedialog.askopenfilename(title='selet a file ', initialdir='./',
                                                     filetypes=(('dbc', '*.dbc'),))
         self.tex_dbcpathT.insert(1.0, dbc_pathT)
-
     def openmtxT(self):
         global mtx_pathT
         mtx_pathT = tkinter.filedialog.askopenfilename(title='selet a file ', initialdir='./',
