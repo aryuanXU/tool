@@ -1,5 +1,5 @@
 import tkinter.filedialog
-import ExcelToDbc,xlrd,os
+import ExcelToDbc,xlrd,os,IniCompare
 import threading
 import time
 import queue
@@ -12,7 +12,7 @@ mtx_pathT= 'nofile'
 asc_path = 'nofile'
 dbc_path = 'nofile'
 
-class GUI(object):
+class mainGUI(object):
     msg_queue = None
 
     def __init__(self):
@@ -29,8 +29,8 @@ class GUI(object):
         self.Button2         = Button(self.win, text = ' >转excel ',   command=self.excel_start,bg='#87CEEB')
         self.Button_opendbcT = Button(self.win, text = 'Open Mtx',     command=self.openmtxT)
         self.Button_openmtxT = Button(self.win, text = 'Open dbc',     command=self.opendbcT)
-        self.Label_dbcpathT  = Label (self.win, text =' dbc_path')
-        self.Label_mtxpathT  = Label (self.win, text = 'mtx_path')
+        self.Label_dbcpathT  = Label (self.win, text =' mtx_path')
+        self.Label_mtxpathT  = Label (self.win, text = 'dbc_path')
         self.tex_dbcpathT    = Text  (self.win, width=30, height=4)
         self.tex_mtxpathT    = Text  (self.win, width=30, height=4)
         self.Label_dbcpathT.   place(x=10, y=40)
@@ -46,23 +46,23 @@ class GUI(object):
         self.Label1          = Label(self.win, text = '会对比当前路径下的blf文件和')
         self.Label_ascpath   = Label(self.win, text ='.csv_path')
         self.Label_dbcpathe  = Label(self.win, text='.dbc_path')
-        self.Label_sp        = Label(self.win,text ='-----------INI_MIN_MAX_对比模块-----------')
-        self.Button_openasc  = Button( self.win, text =' Open ASC ',   command=self.openasc_start)
-        self.Button_opendbc  = Button( self.win, text = ' Open DBC ',  command=self.opendbc_start)
-        self.Button_iniCompare= Button(self.win,text='IniCompare',     command=self.iniCompare_start)
+        self.Label_sp        = Label(self.win,text ='-----------initial/rolling/checksum简单对比-----------')
+        self.Button_openasc  = Button( self.win, text =' Open ASC ',  command=self.openasc_start)
+        self.Button_opendbc  = Button( self.win, text =' Open DBC ',  command=self.opendbc_start)
+        self.Button_iniCompare= Button(self.win, text =' >>Next   ',  command=self.iniCompare_start)
         self.text_ascpath    = Text(self.win, width=30, height=4)
-        self.text_dbcpath    = Text(self.win,width=30,  height=4)
+        self.text_dbcpath    = Text(self.win, width=30, height=4)
         self.Label0.           place(x=50, y=10)
         self.Label_ascpath.    place(x=10, y=210)
         self.Label_dbcpathe.   place(x=10, y=270)
-        self.Label_sp.         place(x=50,y=190)
+        self.Label_sp.         place(x=50, y=190)
         self.text_ascpath.     place(x=70, y=210)
         self.text_dbcpath.     place(x=70, y=270)
-        self.Button_openasc.   place(x=300, y=220)
+        self.Button_openasc.   place(x=300,y=220)
         self.Button_opendbc.   place(x=300,y=280)
-        self.Button_iniCompare.place(x=200,y=350)
+        self.Button_iniCompare.place(x=300,y=350)
 
-        self.text_write      = Text(self.win, width=20, height=30)
+        self.text_write      = Text(self.win, width=30, height=30)
         self.text_write.       place(x=480, y=40)
 
     def event_print(self,root):
@@ -97,9 +97,8 @@ class GUI(object):
         self.T5.setDaemon(True)
         self.T5.start()
         self.event_print(self.win)
-
     def iniCompare_start(self):
-        self.T6 = threading.Thread(target=ExcelToDbc.iniCompare(asc_path, dbc_path, self.msg_queue))
+        self.T6 = threading.Thread(target=IniCompare.iniCompare(asc_path, dbc_path, self.msg_queue))
         self.T6.setDaemon(True)
         self.T6.start()
         self.event_print(self.win)
@@ -124,11 +123,9 @@ class GUI(object):
         mtx_pathT = tkinter.filedialog.askopenfilename(title='selet a file ', initialdir='./',
                                                       filetypes=(('XLSX 工作表', '*.xlsx'),))
         self.tex_mtxpathT.insert(1.0, mtx_pathT)
+mainWin=mainGUI()
+mainWin.win.mainloop()
 
-
-
-a=GUI()
-a.win.mainloop()
 
 
 

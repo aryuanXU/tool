@@ -1,3 +1,5 @@
+import tkinter
+import IniCompare
 import xlrd
 import xlwt
 import queue
@@ -562,29 +564,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
     target_excel.save('target.xlsx')
     msg_queue.put('生成target.xlsx在本地目录\n-----over-----')
 
-def iniCompare(asc_path,dbc_path,msg_queue):
-    if asc_path=='nofile' or dbc_path=='nofile':
-        msg_queue.put('ERROR:    no file choosed/file error')
-        return
-    asc_read=open(asc_path,'r')
-    asc_read_text=asc_read.readlines()
-    dbc_read=open(dbc_path,'r')
-    dbc_read_text=dbc_read.readlines()
-    readAsc_iniValue(asc_read_text)
-    readDbc_iniValue(dbc_read_text)
 
-def readDbc_iniValue(dbc_read_text):
 
-    print('read dbc ok')
-def readAsc_iniValue(asc_read_text):
-    asc_data = {}
-    for i in range(8, 9):
-        data_operation = asc_read_text[i].split(' ')
-        data_operation1=data_operation
-        for j in range(0,data_operation.count('')):
-            data_operation.remove('')
-        
-    print('raed asc ok')
-def compare_iniValue():
-    print('结果')
+
 
