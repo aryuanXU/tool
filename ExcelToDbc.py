@@ -66,14 +66,14 @@ def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
 
     #byte order 仅能通过Mo inter 字符判断
     transmitter_col = 1
-    receiver_col =    2
-    signalName_col =  3
-    description_col= 4
+    receiver_col    = 2
+    signalName_col  = 3
+    description_col = 4
     messageName_col = 5
-    messageID_col =   6
+    messageID_col   = 6
     messageType_col = 7
-    period_col =      8
-    messageDlc_col =  9
+    period_col      = 8
+    messageDlc_col  = 9
     Msb_col =        10
     Lsb_col =        11
     signalSize_col = 12
@@ -96,8 +96,8 @@ def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
     '''打开源excel文件，预操作'''
     excel_read = xlrd.open_workbook(mtx_pathT, 'r', encoding_override='utf-8')
     sheet_read = excel_read.sheet_by_index(3)
-    rowsNum = sheet_read.nrows
-    prgprc = "读取模板结束\n"
+    rowsNum    = sheet_read.nrows
+    prgprc     = "读取模板结束\n"
     msg_queue.put(prgprc)
 
     '''预处理transmitter'''
@@ -234,11 +234,11 @@ def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
     '''读取并写入总括内容'''
     dbc_write.write('VERSION ""\n\n\n')
     dbc_write.write('NS_ :\n')
-    dbc_write.write('    NS_DESC_\n    CM_\n    BA_DEF_\n    BA_\n    VAL_\n    CAT_DEF_\n    CAT_\n    FILTER\n'
-                    '    BA_DEF_DEF_\n    EV_DATA_\n    ENVVAR_DATA_\n    SGTYPE_\n    SGTYPE_VAL_\n    BA_DEF_SGTYPE_\n'
-                    '    BA_SGTYPE_\n    SIG_TYPE_REF_\n    VAL_TABLE_\n    SIG_GROUP_\n    SIG_VALTYPE_\n'
-                    '    SIGTYPE_VALTYPE_\n    BO_TX_BU_\n    BA_DEF_REL_\n    BA_REL_\n'
-                    '    BA_DEF_DEF_REL_\n    BU_SG_REL_\n    BU_EV_REL_\n    BU_BO_REL_\n    SG_MUL_VAL_\n\n')
+    dbc_write.write('   NS_DESC_\n        CM_\n              BA_DEF_\n       BA_\n           VAL_\n         CAT_DEF_\n'     
+                    '   CAT_\n            FILTER\n           BA_DEF_DEF_\n   EV_DATA_\n      ENVVAR_DATA_\n SGTYPE_\n'      
+                    '   SGTYPE_VAL_\n     BA_DEF_SGTYPE_\n   BA_SGTYPE_\n    SIG_TYPE_REF_\n VAL_TABLE_\n   SIG_GROUP_\n' 
+                    '   SIG_VALTYPE_\n    SIGTYPE_VALTYPE_\n BO_TX_BU_\n     BA_DEF_REL_\n   BA_REL_\n'
+                    '   BA_DEF_DEF_REL_\n BU_SG_REL_\n       BU_EV_REL_\n    BU_BO_REL_\n    SG_MUL_VAL_\n\n')
 
     '''读取并写入BS_比特率'''
     dbc_write.write('BS_:\n\n')
@@ -396,7 +396,6 @@ def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
 
     '''读取并写入VAL'''
     for v in valuetable:
-
         if v[2] == '/':
             continue
         v_str = Change_valueTable(v[2])
