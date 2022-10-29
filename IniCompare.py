@@ -1,8 +1,9 @@
 import tkinter,os
 import IniCompare
 
-signalInivalue={}
-messID        =[]
+signalInivalue= {}
+messID        = []
+rollMax       = 0
 def windowForChoose(messID,signalInivalue,msg_queue):
     checkButtonVar = {}
     varForCheck    = tkinter.IntVar()
@@ -41,12 +42,14 @@ def codeGenerate(signalInivalue,checkButtonVar,msg_queue):
     #写入头部代码
     target_txt       = open('targetCpal.txt','a')
     target_txt.write('includes{'
+                     '\n//脚本中rollingCount 最大值取第一个roll的最大值，请视情况修改'
                      '\n}\n\n')
     target_txt.write('variable{{\n'
                      '  int CurRollCount[{}] = [{}];\n'
                      '  int HisRollCount[{}] = [{}];\n'
+                     '  int rollMax          =  {} ;\n'
                      '}}\n\n'.format(numOfRollSig, ('0,'*numOfRollSig).strip(','),
-                                     numOfRollSig, ('0,'*numOfRollSig).strip(',')))
+                                     numOfRollSig, ('0,'*numOfRollSig).strip(','),rollMax))
     numOfRollSig     = 0; numOfRollSta =0
     #读取每个信号携带的mess ID,ini并写出对比代码
     for value in signalInivalue:
@@ -74,11 +77,11 @@ def codeGenerate(signalInivalue,checkButtonVar,msg_queue):
         numOfRollEnd = numOfRollSig
         target_txt.write('\n' + str_writeForCurR + '\n')
         target_txt.write(     '\n  for (i={};i<={};i++){{'
-                              '\n      if (CurRollCount[i])-HisRollCount[i]==1 || (CurRollCount[i])-HisRollCount[i]==-14)' #考虑加入最大值判断
+                              '\n      if (CurRollCount[i])-HisRollCount[i]==1 || (CurRollCount[i])-HisRollCount[i]==-rollMax)' #考虑加入最大值判断
                               '\n          {{ }}'
-                              '\n          else{{'
-                              '\n              write("Roll error,ID:{},time:%f", timeNow()/100000.0)'
-                              '\n              }}'
+                              '\n      else{{'
+                              '\n          write("Roll error,ID:{},time:%f", timeNow()/100000.0)'
+                              '\n          }}'
                               '\n      }}\n'
                      .format(numOfRollSta,numOfRollEnd-1,value))
         target_txt.write('\n' + str_writeForHisR + '\n')
@@ -89,6 +92,7 @@ def codeGenerate(signalInivalue,checkButtonVar,msg_queue):
     msg_queue.put('100% 文档关闭,targetCpal.txt 生成在本地目录')
 
 def iniCompare(dbc_path,msg_queue):
+    global rollMax
     if dbc_path=='nofile':
         msg_queue.put('Error: no file chosed')
         return
@@ -97,6 +101,7 @@ def iniCompare(dbc_path,msg_queue):
     source_dbc = open(dbc_path,'r',encoding='ANSI')
     dbc_lines = source_dbc.readlines()
     messID=[]
+    flag_findMaxRoll = 0
     for i_line in dbc_lines:
         if i_line.split(' ')[0] == 'BO_':
             thisMessageID = hex(eval(i_line.split(' ')[1]))
@@ -105,7 +110,11 @@ def iniCompare(dbc_path,msg_queue):
 
         if i_line.strip(' ').split(' ')[0] == 'SG_':
             signalInivalue[thisMessageID][i_line.strip(' ').split(' ')[1]] = 0                                           # {messageID:{sig:ini_1;sig2:ini_2}}
-
+            if flag_findMaxRoll == 1:
+                continue
+            if 'ROLL' in i_line.strip(' ').split(' ')[1].upper():
+                rollMax= i_line.strip(' ').split(' ')[5].strip('[]').split('|')[1]                                          #当前默认所有的rollcounter一致
+                flag_findMaxRoll =1
         if i_line.split(' ')[0] == 'BA_' and i_line.count('GenSigStartValue')>0:
             signalInivalue[hex(eval(i_line.split(' ')[3]))] [i_line.split(' ')[4]] =  i_line.split(' ')[5].strip(';\n')
 
