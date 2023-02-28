@@ -5,6 +5,9 @@ import xlwt
 import queue
 import os
 
+#后面版本代码可以复用了，但不想改了，太麻烦了
+
+
 def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
     #这个CANflag指示了excel将转换的格式为FD
     prgprc = '初始化...\nproduct at 2022-10-19  x\n'
@@ -62,6 +65,7 @@ def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
                     value_return = value_return + '{} "{}" '.format(str1, i[1])
             else:
                 value_return = value_return + '{} "{}" '.format(eval(i[0]), i[1])
+
         return value_return
 
     #byte order 仅能通过Mo inter 字符判断
@@ -407,6 +411,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
     prgprc = '初始化....'
     msg_queue.put(prgprc)
     def VAl_StyleChange(vab):
+        messid_temp=vab.split(' ')[1]
         vab = vab.strip('\n').strip(';').strip(' ')
         list_return = []
         str_return = ''
@@ -433,7 +438,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
             else:
                 str_return = str_return + list_return[i].strip('"') + '\n'
             isanum = isanum + 1
-        return [list_return[0], str_return.strip('\n')]
+        return [messid_temp,list_return[0], str_return.strip('\n')]
 
     msg_queue.put('1/5 文件检查OK')
     style_Lchange = xlwt.XFStyle()
@@ -446,6 +451,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
                    'Default_Initiaised_value', 'Alternative_Value', 'Factor', 'Offset', 'Value_Min_P',
                    'Value_Max_P', 'Unit', 'Coding']
     excellist_for_write = {}
+    excellist_for_write_ALL={}
     for i in range(0, len(Index_excel)):
         target_sheet.write(0, i, Index_excel[i], style_Lchange)
     msg_queue.put('2/5 首行写入OK')
@@ -467,6 +473,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
             if i.split(' ')[0] == 'BO_':
                 prgprc = 'mess'
                 messINFO_now = i.replace('\n', '').split(' ')
+
                 continue
             if i.strip(' ').split(' ')[0] == 'SG_':
                 prgprc = 'signal'
@@ -488,13 +495,20 @@ def DbcToExcel(msg_queue,dbc_pathT):
                         , [sigINFO_now[6].strip(""), '/'][sigINFO_now[6] == '""']
                         , '/'
                      ]
+                if messINFO_now[1] not in excellist_for_write_ALL:
+                    excellist_for_write_ALL[messINFO_now[1]]={}
+                    excellist_for_write_ALL[messINFO_now[1]].update(excellist_for_write)
+                else:
+                    excellist_for_write_ALL[messINFO_now[1]].update(excellist_for_write)
+                excellist_for_write={}
 
+            '''
             if i.split(' ')[0] == 'BO_TX_BU_':
                 prgprc = 'BO_TX_BU'
                 for j in excellist_for_write:
                     if excellist_for_write[j][5] == i.split(' ')[1]:
                         excellist_for_write[j][0] = i.split(' ')[3].strip(';')
-
+            '''
             if i.split(' ')[0] == 'BA_DEF_':
                 if i.count('DBName')>0 or i.count('BusType'):
                     continue
@@ -523,14 +537,15 @@ def DbcToExcel(msg_queue,dbc_pathT):
             if i.split(' ')[0] == 'VAL_':
                 prgprc = 'VAL_'
                 j = VAl_StyleChange(i)
-                Signal_name = j[0]
-                excellist_for_write[Signal_name][21] = j[1]
+                Message_id=j[0]; Signal_name = j[1]
+                excellist_for_write_ALL[Message_id][Signal_name][21] = j[2]
             if i.split(' ')[0] == 'CM_':
                 prgprc = 'CM_'
     msg_queue.put('3/5 读取dbc OK')
-    '''下面对周期，方式，初始值进行初始化'''
+    '''  #我也不知道为啥要注释这个，好像有用，不然我留着干嘛
+    #下面对周期，方式，初始值进行初始化
     line_doing = 1
-    col_doing = 1
+    col_doing  = 1
     for i in excellist_for_write:
         for k in GenAttribute_inialue:
             if k == 'GenMsgCycleTime':
@@ -539,7 +554,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
                 excellist_for_write[i][6] = GenAttribute_inialue[k]
             if k == 'GenSigStartValue':
                 excellist_for_write[i][15] = GenAttribute_inialue[k]
-    '''下面对各类初始值进行赋值'''
+   #下面对各类初始值进行赋值
     for i in Message_ini:
         for j in excellist_for_write:
             if eval(excellist_for_write[j][5]) == eval(i):
@@ -550,18 +565,147 @@ def DbcToExcel(msg_queue,dbc_pathT):
     for i in Signal_ini:
         if Signal_ini[i] == 'GenSigStartValue':
             excellist_for_write[i][15] = Signal_ini[i][1]
+    '''
     msg_queue.put('4/5 值的初始化OK')
     '''下面开始遍历写入'''
     line_doing = 1
-    col_doing = 1
-    for i in excellist_for_write:
-        for j in range(1, len(excellist_for_write[i]) + 1):
-            target_sheet.write(line_doing, j, excellist_for_write[i][j - 1])
-        line_doing = line_doing + 1
+    for i in excellist_for_write_ALL:
+        for j in excellist_for_write_ALL[i]:
+            for k in range(1, len(excellist_for_write_ALL[i][j]) + 1):
+                target_sheet.write(line_doing, k, excellist_for_write_ALL[i][j][k - 1])
+            line_doing = line_doing + 1
     msg_queue.put('5/5 遍历写入OK')
     source_dbc.close()
     target_excel.save('target.xlsx')
     msg_queue.put('生成target.xlsx在本地目录\n-----over-----')
+
+def DbcCombine(dbc_pathCom_1,dbc_pathCom_2, msg_queue):
+    check_ID=0;  check_mess=0;  check_sig=0;                     #用来校验是否有冲突内容
+    same_ID =0;  same_mess =0;  same_sig =0;
+    if dbc_pathCom_1 == 'nofile' or dbc_pathCom_2 == 'nofile':
+        msg_queue.put('Error: no file chosed')
+    else:
+        source_dbc1 = open(dbc_pathCom_1,'r',encoding='ANSI')
+        source_dbc2 = open(dbc_pathCom_2,'r',encoding='ANSI')
+
+        lines_dict1,ID_list1,mess_Name1,sig_Name1 = DBC_readAndstore(source_dbc1,0)       #flag ==0 表示以该dbc为基础
+        lines_dict2,ID_list2,mess_Name2,sig_Name2 = DBC_readAndstore(source_dbc2,1)
+        check_ID,sameID      = DBC_check(ID_list1, ID_list2)
+        check_mess,same_mess = DBC_check(mess_Name1, mess_Name2)
+        check_sig,same_sig   = DBC_check(sig_Name1, sig_Name2)
+        msg_queue.put('1/3 dbc读取结束')
+
+        if check_ID != '0':
+            msg_queue.put('ID 存在冲突,例如{}'.format(same_ID))
+        if check_mess != '0':
+            msg_queue.put('name 存在冲突,例如{}'.format(same_mess))
+        if check_sig != '0':
+            msg_queue.put('sig 存在冲突,例如{}'.format(same_sig))
+        if check_ID=='0' and check_mess == '0' and check_sig == '0':
+            msg_queue.put('2/3 报文冲突监测完成')
+            DBC_Combine_Write(lines_dict1,lines_dict2,msg_queue)
+        else:
+            source_dbc1.close()
+            source_dbc2.close()
+            lines_dict1={}
+            lines_dict2={}
+            msg_queue.put('3/3 文件关闭,消除冲突后重新使用')
+
+def DBC_readAndstore(source_dbc,flag):
+    lines_dbc = source_dbc.readlines()
+    lines_list = []; ID_list=[] ;  mess_Name=[]; sig_Name=[]
+    lines_dict = {'NS_':[],'BS_':[],'BU_':[],'message':[],'CM_':[],'BA_DEF_':[],'BA_DEF_DEF_':[],
+                  'BA_':[],'VAL_':[]}
+    flag_over = 0
+    thisline_att = '' ;  thisline_id=''
+    for line in lines_dbc:
+        lines_list.append(line)
+        if line.split(' ')[0] == 'NS_':
+            thisline_att = 'NS_'
+            lines_dict['NS_'] = ['NS_ :\n']
+            continue
+        if line.split(':')[0] == 'BS_':
+            thisline_att = 'BS_'
+            lines_dict['BS_']  = ['BS_:\n']
+            continue
+        if line.split(':')[0] == 'BU_':
+            thisline_att = 'BU_'
+            lines_dict['BU_']  = line
+            continue
+        if line.split(' ')[0] == 'BO_':
+            thisline_att = 'message'
+            thisline_id  = line.split(' ')[1]
+            ID_list.append(line.split(' ')[1])
+            mess_Name.append(line.split(' ')[2])
+            lines_dict['message'].append(line)
+            continue
+        if line.split(' ')[0] == '':
+            if line.split(' ')[1] == 'SG_':
+                sig_Name.append(line.split(' ')[2])
+        if line.split(' ')[0] == 'CM_':
+            lines_dict['CM_'].append(line)
+        if line.split(' ')[0] == 'BA_DEF_':
+            thisline_att = 'BA_DEF_'
+            lines_dict['BA_DEF_'].append(line)
+        if line.split(' ')[0] == 'BA_DEF_DEF_':
+            lines_dict['BA_DEF_DEF_'].append(line)
+        if line.split(' ')[0] == 'BA_':
+            if flag==1:
+                if line.split(' ')[1]==["BusType"] or line.split(' ')[1]==["DBName"] :
+                    continue
+            lines_dict['BA_'].append(line)
+        if line.split(' ')[0] == 'VAL_':
+            lines_dict['VAL_'].append(line)
+
+        if thisline_att == 'NS_':
+            lines_dict['NS_'].append(line)
+
+        if thisline_att == 'BS_':
+            lines_dict['BS_'].append(line)
+
+        if thisline_att == 'message':
+            lines_dict['message'].append(line)
+            continue
+
+    return lines_dict,ID_list,mess_Name,sig_Name
+
+def DBC_check(list1,list2):
+    result='0'
+    for value in list1:
+        if value in list2:
+            result=1
+            break
+    return result,value
+
+def DBC_Combine_Write(dict1,dict2,msg_queue):
+    target_dbc = open('target_Combine.dbc', 'a', encoding='ansi')
+    target_dbc.close()
+    os.remove('target_Combine.dbc')
+    target_dbc = open('target_Combine.dbc', 'a', encoding='ansi')
+    for part in dict1:
+        if type(dict1[part]) ==str:
+            target_dbc.write(dict1[part])
+
+        elif part == 'message' or part == 'CM' or part == 'BA' or part == 'VAL':
+            for i in dict1[part]:
+                target_dbc.write(i)
+            for j in dict2[part]:
+                target_dbc.write(j)
+            target_dbc.write('\n')
+        else:
+            for i in dict1[part]:
+                target_dbc.write(i)
+            target_dbc.write('\n')
+    msg_queue.put('3/3 写入完成，关闭文件')
+    target_dbc.close()
+
+
+
+
+
+
+
+
 
 
 

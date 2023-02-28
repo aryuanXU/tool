@@ -44,9 +44,10 @@ def codeGenerate(signalInivalue,checkButtonVar,msg_queue):
     target_txt.write('includes{'
                      '\n//脚本中rollingCount 最大值取第一个roll的最大值，请视情况修改'
                      '\n}\n\n')
-    target_txt.write('variable{{\n'
-                     '  int CurRollCount[{}] = [{}];\n'
-                     '  int HisRollCount[{}] = [{}];\n'
+    target_txt.write('variables'
+                     '\n{{\n'
+                     '  int CurRollCount[{}] = {{ {} }};\n'
+                     '  int HisRollCount[{}] = {{ {} }};\n'
                      '  int rollMax          =  {} ;\n'
                      '}}\n\n'.format(numOfRollSig, ('0,'*numOfRollSig).strip(','),
                                      numOfRollSig, ('0,'*numOfRollSig).strip(','),rollMax))
@@ -70,17 +71,17 @@ def codeGenerate(signalInivalue,checkButtonVar,msg_queue):
                 numOfRollSig += 1
                 str_writeForCurR = str_writeForCurR + '  CurRollCount[{}] = this.{};\n'\
                              .format(numOfRollSig - 1, value_sig)
-                str_writeForHisR = str_writeForHisR + '  HisRillCount[{}] = CurRollCount[{}]\n'\
+                str_writeForHisR = str_writeForHisR + '  HisRollCount[{}] = CurRollCount[{}];\n'\
                              .format(numOfRollSig - 1, numOfRollSig - 1)
 
         #写出roll的判断代码再结束这条mess
         numOfRollEnd = numOfRollSig
         target_txt.write('\n' + str_writeForCurR + '\n')
         target_txt.write(     '\n  for (i={};i<={};i++){{'
-                              '\n      if (CurRollCount[i])-HisRollCount[i]==1 || (CurRollCount[i])-HisRollCount[i]==-rollMax)' #考虑加入最大值判断
+                              '\n      if ((CurRollCount[i])-HisRollCount[i]==1 || (CurRollCount[i])-HisRollCount[i]==-rollMax)' #考虑加入最大值判断
                               '\n          {{ }}'
                               '\n      else{{'
-                              '\n          write("Roll error,ID:{},time:%f", timeNow()/100000.0)'
+                              '\n          write("Roll error,ID:{},time:%f", timeNow()/100000.0);'
                               '\n          }}'
                               '\n      }}\n'
                      .format(numOfRollSta,numOfRollEnd-1,value))
@@ -102,7 +103,9 @@ def iniCompare(dbc_path,msg_queue):
     dbc_lines = source_dbc.readlines()
     messID=[]
     flag_findMaxRoll = 0
+
     for i_line in dbc_lines:
+
         if i_line.split(' ')[0] == 'BO_':
             thisMessageID = hex(eval(i_line.split(' ')[1]))
             messID.append(thisMessageID)
@@ -117,6 +120,8 @@ def iniCompare(dbc_path,msg_queue):
                 flag_findMaxRoll =1
         if i_line.split(' ')[0] == 'BA_' and i_line.count('GenSigStartValue')>0:
             signalInivalue[hex(eval(i_line.split(' ')[3]))] [i_line.split(' ')[4]] =  i_line.split(' ')[5].strip(';\n')
+        #记录每个信号的checksum
+        #if i_line.split(' ')[0] == 'CM_' and i_line.split(' ')[1] == 'SG_':
 
     source_dbc.close()
     messID.sort()
