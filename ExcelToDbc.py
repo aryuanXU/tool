@@ -6,8 +6,6 @@ import queue
 import os
 
 #后面版本代码可以复用了，但不想改了，太麻烦了
-
-
 def ExcelToDbc(msg_queue,CANFD_flag,mtx_pathT):
     #这个CANflag指示了excel将转换的格式为FD
     prgprc = '初始化...\nproduct at 2022-10-19  x\n'
@@ -443,7 +441,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
     msg_queue.put('1/5 文件检查OK')
     style_Lchange = xlwt.XFStyle()
     style_Lchange.alignment.wrap = 1
-    source_dbc = open(dbc_pathT, 'r', encoding='ANSI')
+    source_dbc = open(dbc_pathT, 'r', encoding='UTF-8')
     target_excel = xlwt.Workbook(encoding='ansi')
     target_sheet = target_excel.add_sheet('矩阵')
     Index_excel = ['NO.', 'Transmitter', 'Receiver', 'Signal_name', 'Signal_Description', 'Message_Name', 'Message_ID',
@@ -478,6 +476,8 @@ def DbcToExcel(msg_queue,dbc_pathT):
             if i.strip(' ').split(' ')[0] == 'SG_':
                 prgprc = 'signal'
                 sigINFO_now = i.replace('\n', '').strip(' ').split(' ')
+                if len(i.strip(' ').split(':')[0].strip(' ').split(' '))>2:         #长度太长有可能是信号组，这里暂定为信号组处理
+                    sigINFO_now.pop(2)
                 excellist_for_write[sigINFO_now[1]] = \
                     [messINFO_now[4].strip('\n').strip(';'), sigINFO_now[7], sigINFO_now[1], '/'
                         , messINFO_now[2].strip(':'), hex(eval(messINFO_now[1])), ''
@@ -501,7 +501,7 @@ def DbcToExcel(msg_queue,dbc_pathT):
                 else:
                     excellist_for_write_ALL[messINFO_now[1]].update(excellist_for_write)
                 excellist_for_write={}
-
+                continue
             '''
             if i.split(' ')[0] == 'BO_TX_BU_':
                 prgprc = 'BO_TX_BU'
